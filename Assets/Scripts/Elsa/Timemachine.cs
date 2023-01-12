@@ -2,17 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Timemachine : MonoBehaviour
 {
     [SerializeField]
     KeyCode Timemachinee;
 
-    private void OnTriggerStay2D(Collider2D collision)
+    public GameObject buttons;
+
+    private void Start()
     {
+        
+    }
+
+    public void OnTriggerStay2D(Collider2D collision)
+    {
+        
         if (collision.gameObject.tag == "Timemachine" && Input.GetKey(Timemachinee))
         {
-            SceneManager.LoadScene(5);
+            Debug.Log("hargjort");
+            buttons.SetActive(true);
         }
     }
 }

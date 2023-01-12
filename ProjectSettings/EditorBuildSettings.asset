@@ -5,25 +5,28 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Shit/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/1 The Future.unity
-    guid: e03319836c3eec842b8ecd1caad66a16
-  - enabled: 1
-    path: Assets/Scenes/2 The Future.unity
-    guid: 9328491292adbef4d99a33602e21ab5d
-  - enabled: 1
-    path: Assets/Scenes/3 The Future.unity
-    guid: 6c0dd8f2c8869204099691b927679ec2
-  - enabled: 1
-    path: Assets/Scenes/Medieval.unity
+    path: Assets/Scenes/Dirty/Medieval.unity
     guid: 04740f9ef5676354c8b8c136590367da
   - enabled: 1
-    path: Assets/Scenes/New York.unity
+    path: Assets/Scenes/Dirty/New York.unity
     guid: 622d28b4b25611f47ba29e14d8b10e80
   - enabled: 1
-    path: Assets/Scenes/Timetravelling.unity
-    guid: c349e276f417dd64aa6501d07a08f50e
+    path: Assets/Scenes/Dirty/The Future.unity
+    guid: e03319836c3eec842b8ecd1caad66a16
+  - enabled: 1
+    path: Assets/Scenes/Clean/Medieval clean.unity
+    guid: 5b09722fa350e914eb29ddbe44cb66a6
+  - enabled: 1
+    path: Assets/Scenes/Clean/New York clean.unity
+    guid: d29471b0d8f42544eabb6fc2c7aedb08
+  - enabled: 1
+    path: Assets/Scenes/Clean/The Future clean.unity
+    guid: 28b6f8f21a53d444d8ffb8525c49ec28
+  - enabled: 1
+    path: Assets/Scenes/Half Clean/The Future half clean.unity
+    guid: 56aa1e482f373124ab0a9602d3ed0e59
+  - enabled: 1
+    path: Assets/Scenes/Half Clean/Medieval half clean.unity
+    guid: 773b5a61aa88369498ee2d3b623e94bd
   m_configObjects: {}
