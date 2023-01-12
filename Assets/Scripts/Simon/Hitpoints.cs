@@ -21,10 +21,12 @@ public class Hitpoints : MonoBehaviour
 
     bool shouldTakeTickDamage = false;
     bool shouldHeal = true;
+    bool takeShootingDamage = true;
 
     public float damageTimer = 1f;
     public float corrosiveTimer = 2.1f;
     public float timeBetweenHeals = 5f;
+    public float healCooldown = 10f;
 
     private void Start()
     {
@@ -38,6 +40,13 @@ public class Hitpoints : MonoBehaviour
             shouldTakeTickDamage = true;
             shouldHeal = false;
             damageTimer = 1f;
+        }
+
+        if(collision.gameObject.layer == 9)
+        {
+            playerHP -= 1f;
+            healCooldown = 10f;
+            Destroy(collision.gameObject);
         }
     }
 
@@ -53,6 +62,8 @@ public class Hitpoints : MonoBehaviour
             corrosiveTimer = 2.1f;
         }
     }
+
+    
 
     private void Update()
     {
@@ -93,6 +104,16 @@ public class Hitpoints : MonoBehaviour
         {
             shouldHeal = false;
             playerHP = 10f;
+        }
+
+        if(healCooldown > 0)
+        {
+            shouldHeal = false;
+        }
+
+        else if(healCooldown <= 0)
+        {
+            shouldHeal = true;
         }
     }
 }
