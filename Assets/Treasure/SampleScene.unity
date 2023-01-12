@@ -693,7 +693,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1052688705}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.52, y: -3.24, z: 0}
+  m_LocalPosition: {x: 11.52, y: -3.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1090,9 +1090,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcf97db83784c9843b725f36ec8f6133, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHPtext: {fileID: 0}
+  playerHPtext: {fileID: 1134800881}
   damageTimer: 1
   corrosiveTimer: 2
+  timeBetweenHeals: 5
 --- !u!1 &1234634805
 GameObject:
   m_ObjectHideFlags: 0
