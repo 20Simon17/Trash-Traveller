@@ -24,10 +24,13 @@ public class Hitpoints : MonoBehaviour
 
 
     //public TextMeshProUGUI playerHPtext;
-    float playerHP = 10;
+    public float playerHP = 10;
 
-    public List<Image> fullHearts;
-    public List<Image> halfHearts;
+    //public List<Image> fullHearts;
+    //public List<Image> halfHearts;
+
+    public Image[] hearts;
+    int heartsArraySpot = 0;
 
     bool shouldTakeTickDamage = false;
     bool shouldHeal = true;
@@ -41,6 +44,8 @@ public class Hitpoints : MonoBehaviour
     private void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -124,6 +129,19 @@ public class Hitpoints : MonoBehaviour
         else if(healCooldown <= 0)
         {
             shouldHeal = true;
+        }
+
+        heartsArraySpot = 0;
+
+        foreach (var item in hearts)
+        {
+            item.gameObject.SetActive(false);
+        }
+        for (float i = 0; i < playerHP; i += 0.5f)
+        {
+            hearts[heartsArraySpot].gameObject.SetActive(true);
+            heartsArraySpot++;
+
         }
     }
 }
