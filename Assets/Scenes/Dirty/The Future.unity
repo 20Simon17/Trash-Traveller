@@ -1635,26 +1635,12 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< Updated upstream
   - component: {fileID: 1152434207}
   - component: {fileID: 1152434209}
   - component: {fileID: 1152434208}
   m_Layer: 5
   m_Name: Full Hearts
   m_TagString: Untagged
-=======
-  - component: {fileID: 1410639156}
-  - component: {fileID: 1410639155}
-  - component: {fileID: 1410639158}
-  - component: {fileID: 1410639157}
-  - component: {fileID: 1410639160}
-  - component: {fileID: 1410639159}
-  - component: {fileID: 1410639161}
-  - component: {fileID: 1410639162}
-  m_Layer: 7
-  m_Name: Player
-  m_TagString: Player
->>>>>>> Stashed changes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1715,49 +1701,9 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 1152434206}
   m_CullTransparentMesh: 1
 --- !u!1 &1199875399
-=======
-  m_GameObject: {fileID: 1410639154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37f16334d3229a84e9f06b9e3d3f5f57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Timemachinee: 101
-  buttons: {fileID: 1856431465}
---- !u!114 &1410639162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1410639154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcf97db83784c9843b725f36ec8f6133, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fullHearts:
-  - {fileID: 669385766}
-  - {fileID: 772926647}
-  - {fileID: 1818456345}
-  - {fileID: 1344235760}
-  - {fileID: 232821698}
-  - {fileID: 1152434208}
-  - {fileID: 1344113595}
-  - {fileID: 2036635868}
-  - {fileID: 621646476}
-  - {fileID: 1820264654}
-  halfHearts: []
-  damageTimer: 1
-  corrosiveTimer: 2.1
-  timeBetweenHeals: 5
-  healCooldown: 10
---- !u!1 &1573927629
->>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
