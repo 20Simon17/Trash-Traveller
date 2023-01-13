@@ -9,7 +9,6 @@ public class Hitpoints : MonoBehaviour
     //litet skräp hp = 4
     //stort skräp hp = 7
 
-    //public TextMeshProUGUI playerHPtext;
     public float playerHP = 10;
 
     public GameObject[] hearts;
@@ -22,7 +21,6 @@ public class Hitpoints : MonoBehaviour
 
     bool shouldTakeTickDamage = false;
     bool shouldHeal = true;
-    bool takeShootingDamage = true;
 
     public float damageTimer = 1f;
     public float corrosiveTimer = 2.1f;
@@ -79,8 +77,6 @@ public class Hitpoints : MonoBehaviour
         }
     }
 
-    
-
     private void Update()
     {
         damageTimer -= Time.deltaTime;
@@ -131,13 +127,13 @@ public class Hitpoints : MonoBehaviour
         {
             shouldHeal = true;
         }
-
-        heartsArraySpot = 0;
-
+        
         foreach (var item in hearts)
         {
             item.gameObject.SetActive(false);
         }
+
+        heartsArraySpot = 0;
         for (float i = 0; i < playerHP; i += 0.5f)
         {
             hearts[heartsArraySpot].gameObject.SetActive(true);
