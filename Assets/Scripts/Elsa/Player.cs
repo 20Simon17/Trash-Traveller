@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -28,6 +29,10 @@ public class Player : MonoBehaviour
     public bool grounded;
 
     public int JumpVelocity;
+
+    public int trashbar = 10;
+
+    public List<Image> trashList;
 
 
     // Start is called before the first frame update
@@ -87,6 +92,7 @@ public class Player : MonoBehaviour
         {
             grounded = true;
         }
+
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -97,4 +103,17 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Trash")
+        {
+            trashList[trashbar].gameObject.SetActive(false);
+            trashbar--;
+
+            if (trashbar <= 0)
+            {
+                trashbar = 0;
+            }
+        }
+    }
 }
