@@ -16,8 +16,18 @@ public class Hitpoints : MonoBehaviour
 
     //heal 0,5 per 5 sekunder
 
-    public TextMeshProUGUI playerHPtext;
+    //Lista med hela hjärtan
+    //lista med halva hjärtan
+    //checka hur mycket skada man tog / hur mycket hp man har kvar
+    //ta bort platser från listan
+    //om man kan heala (shouldHeal), lägg till hjärta
+
+
+    //public TextMeshProUGUI playerHPtext;
     float playerHP = 10;
+
+    public List<Image> fullHearts;
+    public List<Image> halfHearts;
 
     bool shouldTakeTickDamage = false;
     bool shouldHeal = true;
@@ -71,7 +81,7 @@ public class Hitpoints : MonoBehaviour
         corrosiveTimer -= Time.deltaTime;
         timeBetweenHeals -= Time.deltaTime;
 
-        playerHPtext.text = "HP: " + playerHP.ToString();
+        //playerHPtext.text = "HP: " + playerHP.ToString();
 
         if (corrosiveTimer >= 0)
         {
