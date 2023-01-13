@@ -6,31 +6,19 @@ using TMPro;
 
 public class Hitpoints : MonoBehaviour
 {
-    //Player HP = 10
     //litet skräp hp = 4
     //stort skräp hp = 7
-
-    //frätande skräp skada = 0,5
-    //crossbow skada = 1
-    //pistol skada = 1 men snabbare
-
-    //heal 0,5 per 5 sekunder
-
-    //Lista med hela hjärtan
-    //lista med halva hjärtan
-    //checka hur mycket skada man tog / hur mycket hp man har kvar
-    //ta bort platser från listan
-    //om man kan heala (shouldHeal), lägg till hjärta
-
 
     //public TextMeshProUGUI playerHPtext;
     public float playerHP = 10;
 
-    //public List<Image> fullHearts;
-    //public List<Image> halfHearts;
-
-    public Image[] hearts;
+    public GameObject[] hearts;
     int heartsArraySpot = 0;
+
+    public GameObject fullHearts;
+    public GameObject halfHearts;
+    int fH = 0;
+    int hH = 0;
 
     bool shouldTakeTickDamage = false;
     bool shouldHeal = true;
@@ -45,7 +33,20 @@ public class Hitpoints : MonoBehaviour
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
 
-        
+        for (int x = 0; x < 20; x++)
+        {
+            if(hH == fH)
+            {
+                hearts[x] = halfHearts.transform.GetChild(hH).gameObject;
+                hH++;
+            }
+
+            else if(hH > fH)
+            {
+                hearts[x] = fullHearts.transform.GetChild(fH).gameObject;
+                fH++;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -141,7 +142,6 @@ public class Hitpoints : MonoBehaviour
         {
             hearts[heartsArraySpot].gameObject.SetActive(true);
             heartsArraySpot++;
-
         }
     }
 }
