@@ -268,8 +268,8 @@ GameObject:
   - component: {fileID: 49527127}
   - component: {fileID: 49527126}
   - component: {fileID: 49527125}
-  - component: {fileID: 49527124}
   - component: {fileID: 49527123}
+  - component: {fileID: 49527124}
   - component: {fileID: 49527128}
   m_Layer: 7
   m_Name: Player
@@ -453,7 +453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f16334d3229a84e9f06b9e3d3f5f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Timemachinee: 101
+  Timemachinee: 119
   buttons: {fileID: 1111101102}
 --- !u!1 &49924871
 GameObject:
