@@ -19,13 +19,13 @@ public class Hitpoints : MonoBehaviour
     int fH = 0;
     int hH = 0;
 
-    bool shouldTakeTickDamage = false;
-    bool shouldHeal = true;
+    public bool shouldTakeTickDamage = false;
+    public bool shouldHeal = true;
 
     public float damageTimer = 1f;
     public float corrosiveTimer = 2.1f;
-    public float timeBetweenHeals = 5f;
-    public float healCooldown = 5f;
+    public float timeBetweenHeals = 2f;
+    public float healCooldown = 3f;
 
     private void Start()
     {
@@ -59,7 +59,7 @@ public class Hitpoints : MonoBehaviour
         if(collision.gameObject.layer == 9)
         {
             playerHP -= 1f;
-            healCooldown = 5f;
+            healCooldown = 3f;
             Destroy(collision.gameObject);
         }
     }
@@ -71,10 +71,10 @@ public class Hitpoints : MonoBehaviour
             shouldTakeTickDamage = false;
             shouldHeal = true;
 
-            timeBetweenHeals = 5f;
+            timeBetweenHeals = 2f;
             damageTimer = 1f;
             corrosiveTimer = 2.1f;
-            healCooldown = 5f;
+            healCooldown = 3f;
         }
     }
 
@@ -83,8 +83,7 @@ public class Hitpoints : MonoBehaviour
         damageTimer -= Time.deltaTime;
         corrosiveTimer -= Time.deltaTime;
         timeBetweenHeals -= Time.deltaTime;
-
-        //playerHPtext.text = "HP: " + playerHP.ToString();
+        healCooldown -= Time.deltaTime;
 
         if (corrosiveTimer >= 0)
         {
@@ -92,7 +91,7 @@ public class Hitpoints : MonoBehaviour
             {
                 damageTimer = 1f;
                 playerHP -= 0.5f;
-                healCooldown = 5f;
+                healCooldown = 3f;
             }
         }
 
@@ -102,7 +101,7 @@ public class Hitpoints : MonoBehaviour
             {
                 damageTimer = 1f;
                 playerHP -= 0.5f;
-                healCooldown = 5f;
+                healCooldown = 3f;
             }
         }
 
@@ -110,7 +109,7 @@ public class Hitpoints : MonoBehaviour
         {
             if(timeBetweenHeals <= 0f)
             {
-                timeBetweenHeals = 5f;
+                timeBetweenHeals = 2f;
                 playerHP += 0.5f;
             }
         }

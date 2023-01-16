@@ -894,10 +894,12 @@ MonoBehaviour:
   - {fileID: 0}
   fullHearts: {fileID: 35695001}
   halfHearts: {fileID: 1819460666}
+  shouldTakeTickDamage: 0
+  shouldHeal: 1
   damageTimer: 1
   corrosiveTimer: 2.1
-  timeBetweenHeals: 5
-  healCooldown: 5
+  timeBetweenHeals: 2
+  healCooldown: 3
 --- !u!114 &1700615546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -926,16 +928,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   sprintspeed: 11
-  Left: 97
-  Right: 100
-  Jump: 32
-  reload: 0
-  direction: {x: 1, y: 0, z: 0}
-  rigidbody2d: {fileID: 0}
+  left: 97
+  right: 100
+  jump: 32
+  rb: {fileID: 0}
   grounded: 0
-  JumpVelocity: 12
+  JumpVelocity: 8
   trashbar: 10
   trashList: []
+  anim: {fileID: 0}
+  rend: {fileID: 1700615551}
 --- !u!61 &1700615548
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -951,7 +953,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -1.1384333}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0, y: 0, z: 0.78, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.78, y: 2.25}
     newSize: {x: 0.78, y: 2.25}
@@ -977,7 +979,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0, y: 0, z: 0.78, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.78, y: 2.25}
     newSize: {x: 0.78, y: 2.25}
@@ -1350,6 +1352,8 @@ MonoBehaviour:
   - {fileID: 0}
   fullHearts: {fileID: 35695001}
   halfHearts: {fileID: 1819460666}
+  shouldTakeTickDamage: 0
+  shouldHeal: 1
   damageTimer: 1
   corrosiveTimer: 2.1
   timeBetweenHeals: 5
@@ -1430,16 +1434,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   sprintspeed: 11
-  Left: 97
-  Right: 100
-  Jump: 32
-  reload: 0
-  direction: {x: 1, y: 0, z: 0}
-  rigidbody2d: {fileID: 2049043408753470122}
+  left: 0
+  right: 0
+  jump: 0
+  rb: {fileID: 0}
   grounded: 0
   JumpVelocity: 15
   trashbar: 10
   trashList: []
+  anim: {fileID: 0}
+  rend: {fileID: 0}
 --- !u!1 &2049043408753470126
 GameObject:
   m_ObjectHideFlags: 0
