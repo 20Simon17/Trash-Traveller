@@ -25,7 +25,7 @@ public class Hitpoints : MonoBehaviour
     public float damageTimer = 1f;
     public float corrosiveTimer = 2.1f;
     public float timeBetweenHeals = 5f;
-    public float healCooldown = 10f;
+    public float healCooldown = 5f;
 
     private void Start()
     {
@@ -59,7 +59,7 @@ public class Hitpoints : MonoBehaviour
         if(collision.gameObject.layer == 9)
         {
             playerHP -= 1f;
-            healCooldown = 10f;
+            healCooldown = 5f;
             Destroy(collision.gameObject);
         }
     }
@@ -74,6 +74,7 @@ public class Hitpoints : MonoBehaviour
             timeBetweenHeals = 5f;
             damageTimer = 1f;
             corrosiveTimer = 2.1f;
+            healCooldown = 5f;
         }
     }
 
@@ -91,6 +92,7 @@ public class Hitpoints : MonoBehaviour
             {
                 damageTimer = 1f;
                 playerHP -= 0.5f;
+                healCooldown = 5f;
             }
         }
 
@@ -100,6 +102,7 @@ public class Hitpoints : MonoBehaviour
             {
                 damageTimer = 1f;
                 playerHP -= 0.5f;
+                healCooldown = 5f;
             }
         }
 

@@ -6,23 +6,10 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public float speed;
-
     public float sprintspeed;
 
     [SerializeField]
-    KeyCode Left;
-
-    [SerializeField]
-    KeyCode Right;
-
-    [SerializeField]
-    KeyCode Jump;
-
-    [SerializeField]
-    float reload;
-
-    [SerializeField]
-    Vector3 direction = new Vector3(1, 0, 0);
+    KeyCode left, right, jump;
 
     public Rigidbody2D rigidbody2d;
 
@@ -34,20 +21,21 @@ public class Player : MonoBehaviour
 
     public List<Image> trashList;
 
+    public Animator anim;
+
     void Start()
     {
         rigidbody2d = transform.GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+
+        left = KeyCode.A;
+        right = KeyCode.D;
+        jump = KeyCode.Space;
     }
 
     void Update()
     {
-        reload += Time.deltaTime;
-        if (Physics2D.BoxCast(transform.position, new Vector2(1, 0.25f), 0, -transform.up, 2))
-        {
-           
-        }
-
-        if (Input.GetKey(Left) && Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(left) && Input.GetKey(KeyCode.LeftShift))
         {
 
             transform.position -= new Vector3(sprintspeed, 0, 0) * Time.deltaTime;
@@ -55,13 +43,13 @@ public class Player : MonoBehaviour
 
         }
 
-        else if (Input.GetKey(Left))
+        else if (Input.GetKey(left))
         {
             transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
 
-        if (Input.GetKey(Right) && Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(right) && Input.GetKey(KeyCode.LeftShift))
         {
 
             transform.position += new Vector3(sprintspeed, 0, 0) * Time.deltaTime;
@@ -69,17 +57,16 @@ public class Player : MonoBehaviour
 
         }
 
-        else if (Input.GetKey(Right))
+        else if (Input.GetKey(right))
         {
             transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
 
-        if (Input.GetKeyDown(Jump) && grounded)
+        if (Input.GetKeyDown(jump) && grounded)
         {
             rigidbody2d.velocity = Vector2.up * JumpVelocity;
         }
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -88,7 +75,6 @@ public class Player : MonoBehaviour
         {
             grounded = true;
         }
-
     }
 
     private void OnCollisionExit2D(Collision2D collision)
