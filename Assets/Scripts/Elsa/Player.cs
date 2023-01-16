@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     public KeyCode right = KeyCode.D;
     public KeyCode jump = KeyCode.Space;
 
-    public Rigidbody2D rigidbody2d;
+    public Rigidbody2D rb;
 
     public bool grounded;
 
@@ -24,53 +24,75 @@ public class Player : MonoBehaviour
 
     public Animator anim;
 
+    public SpriteRenderer rend;
+
     void Start()
     {
-        rigidbody2d = transform.GetComponent<Rigidbody2D>();
+        rb = transform.GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
 
     void Update()
     {
+        anim.SetFloat("SpeedY", rb.velocity.y);
+
         if (Input.GetKey(left) && Input.GetKey(KeyCode.LeftShift))
         {
-            anim.SetTrigger("Run");
+            anim.SetBool("Running", true);
+            
             transform.position -= new Vector3(sprintspeed, 0, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
+            rend.flipX = false;
 
         }
 
         else if (Input.GetKey(left))
         {
+            anim.SetBool("Running", false);
+            //walk
+
             transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
+            rend.flipX = false;
         }
 
         if (Input.GetKey(right) && Input.GetKey(KeyCode.LeftShift))
         {
-            anim.SetTrigger("Run");
+            anim.SetBool("Running", true);
+
             transform.position += new Vector3(sprintspeed, 0, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
-
+            rend.flipX = true;
         }
 
         else if (Input.GetKey(right))
         {
+            anim.SetBool("Running", false);
+            //walk
+
             transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
+            rend.flipX = true;
         }
 
         if (Input.GetKeyDown(jump) && grounded)
         {
-            anim.SetTrigger("Jump");
-            rigidbody2d.velocity = Vector2.up * JumpVelocity;
+            anim.SetBool("Running", false);
+            anim.Play("Jump");
+
+            rb.velocity = Vector2.up * JumpVelocity;
+        }
+
+        if(!Input.GetKey(right) && !Input.GetKey(left))
+        {
+            anim.SetBool("Running", false);
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 6)
-        {
+        {  
             grounded = true;
         }
     }
@@ -94,6 +116,19 @@ public class Player : MonoBehaviour
             {
                 trashbar = 0;
             }
+        }
+
+        if(collision.gameObject.layer == 6)
+        {
+            anim.SetBool("Land", true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == 6)
+        {
+            anim.SetBool("Land", false);
         }
     }
 }
