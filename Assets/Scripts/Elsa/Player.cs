@@ -5,11 +5,29 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+<<<<<<< Updated upstream
     public float speed;
     public float sprintspeed;
 
     [SerializeField]
     KeyCode left, right, jump;
+=======
+    public float speed;    
+
+    public float sprintspeed;
+
+    [SerializeField]
+    KeyCode Left;
+
+    [SerializeField]
+    KeyCode Right;
+
+    [SerializeField]
+    KeyCode Jump;
+
+    [SerializeField]
+    Vector3 direction = new Vector3(1, 0, 0);
+>>>>>>> Stashed changes
 
     public Rigidbody2D rigidbody2d;
 
@@ -26,16 +44,25 @@ public class Player : MonoBehaviour
     void Start()
     {
         rigidbody2d = transform.GetComponent<Rigidbody2D>();
+<<<<<<< Updated upstream
         anim = GetComponent<Animator>();
 
         left = KeyCode.A;
         right = KeyCode.D;
         jump = KeyCode.Space;
+=======
+        //
+>>>>>>> Stashed changes
     }
 
     void Update()
     {
+<<<<<<< Updated upstream
         if (Input.GetKey(left) && Input.GetKey(KeyCode.LeftShift))
+=======
+
+        if (Input.GetKey(Left) && Input.GetKey(KeyCode.LeftShift))
+>>>>>>> Stashed changes
         {
 
             transform.position -= new Vector3(sprintspeed, 0, 0) * Time.deltaTime;
