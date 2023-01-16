@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f9a302bb45780f046a67bb1ca6611ebf
+guid: 764c5a4125b75104682c0e4bb836b227
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -63,7 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: karaktar_idle-Sheet_0
+      name: Time_machine_-_trash_traveler_-_2245_idle_animation_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 78
-        height: 225
+        x: 0
+        y: 143
+        width: 150
+        height: 138
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0dd663e3e1ad954aa06a98706c10933
-      internalID: -422813701
+      spriteID: a00d5369596d7ee458ee58d0fa9179bc
+      internalID: -195191559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: karaktar_idle-Sheet_1
+      name: Time_machine_-_trash_traveler_-_2245_idle_animation_1
       rect:
         serializedVersion: 2
-        x: 82
-        y: 0
-        width: 77
-        height: 222
+        x: 155
+        y: 143
+        width: 150
+        height: 138
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30ecc1bb8dbc9da48b22186ebd6f9511
-      internalID: 907808148
+      spriteID: fbba777a8cd46f5438e44c2ebd00dc8e
+      internalID: 807364695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time_machine_-_trash_traveler_-_2245_idle_animation_2
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 143
+        width: 150
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e90662a9d7e80c14e81e41f1a4e5f76d
+      internalID: 1648495031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time_machine_-_trash_traveler_-_2245_idle_animation_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 150
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80a0113fa07890241b4d894e4527a0b2
+      internalID: -338059749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time_machine_-_trash_traveler_-_2245_idle_animation_4
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 0
+        width: 150
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bf4850d323aef84ab1f382c685aefa1
+      internalID: -1543059380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time_machine_-_trash_traveler_-_2245_idle_animation_5
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 0
+        width: 150
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bacd3ef0e9c2f6e4ca07413010a3de6e
+      internalID: -637008612
       vertices: []
       indices: 
       edges: []
@@ -157,8 +241,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      karaktar_idle-Sheet_0: -422813701
-      karaktar_idle-Sheet_1: 907808148
+      Time_machine_-_trash_traveler_-_2245_idle_animation_5: -637008612
+      Time_machine_-_trash_traveler_-_2245_idle_animation_4: -1543059380
+      Time_machine_-_trash_traveler_-_2245_idle_animation_1: 807364695
+      Time_machine_-_trash_traveler_-_2245_idle_animation_0: -195191559
+      Time_machine_-_trash_traveler_-_2245_idle_animation_2: 1648495031
+      Time_machine_-_trash_traveler_-_2245_idle_animation_3: -338059749
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
