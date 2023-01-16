@@ -34,14 +34,11 @@ public class Player : MonoBehaviour
 
     public List<Image> trashList;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         rigidbody2d = transform.GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         reload += Time.deltaTime;
@@ -50,7 +47,6 @@ public class Player : MonoBehaviour
            
         }
 
-        //Det här är till för att spelaren bara ska kunna hoppa när den rör vid platformarna.
         if (Input.GetKey(Left) && Input.GetKey(KeyCode.LeftShift))
         {
 
