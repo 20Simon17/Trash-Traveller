@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
 
     public int JumpVelocity;
 
-    public int trashbar = 10;
+    public int trashbar = 9;
 
     public List<Image> trashList;
 
@@ -26,10 +26,15 @@ public class Player : MonoBehaviour
 
     public SpriteRenderer rend;
 
+    public float numberOfTaggedObjects;
+
+    public float UpdatenumberOfTaggedObjects;
+
     void Start()
     {
         rb = transform.GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        numberOfTaggedObjects = GameObject.FindGameObjectsWithTag("Trash").Length;
     }
 
     void Update()
@@ -87,6 +92,8 @@ public class Player : MonoBehaviour
         {
             anim.SetBool("Running", false);
         }
+
+        UpdatenumberOfTaggedObjects = GameObject.FindGameObjectsWithTag("Trash").Length;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -107,18 +114,26 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+        print((UpdatenumberOfTaggedObjects / numberOfTaggedObjects) * 100 % 10f);
+        
         if (collision.gameObject.tag == "Trash")
         {
-            trashList[trashbar].gameObject.SetActive(false);
-            trashbar--;
+            Destroy(collision.gameObject);
 
-            if (trashbar <= 0)
+            if (((UpdatenumberOfTaggedObjects / numberOfTaggedObjects) * 100) % 10f == 5)
             {
-                trashbar = 0;
+                trashList[trashbar].gameObject.SetActive(false);
+                trashbar--;
+
+                if (trashbar <= 0)
+                {
+                    trashbar = 0;
+                }
             }
         }
 
-        if(collision.gameObject.layer == 6)
+        if (collision.gameObject.layer == 6)
         {
             anim.SetBool("Land", true);
         }
