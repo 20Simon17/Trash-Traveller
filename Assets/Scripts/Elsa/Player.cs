@@ -33,18 +33,17 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = transform.GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>(); //referens till animatorn på spelaren -Simon
         numberOfTaggedObjects = GameObject.FindGameObjectsWithTag("Trash").Length;
     }
 
     void Update()
     {
-        anim.SetFloat("SpeedY", rb.velocity.y);
-
         if (Input.GetKey(left) && Input.GetKey(KeyCode.LeftShift))
         {
-            anim.SetBool("Running", true);
-            
+            anim.SetBool("Running", true); //när man håller ner vänster rörelse knapp + spring knappen så ska spring animationen kunna köras -Simon
+            anim.SetBool("Walking", false); //-||- så ska gå animationen inte kunna köras -Simon
+
             transform.position -= new Vector3(sprintspeed, 0, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
             rend.flipX = false;
@@ -53,8 +52,8 @@ public class Player : MonoBehaviour
 
         else if (Input.GetKey(left))
         {
-            anim.SetBool("Running", false);
-            //walk
+            anim.SetBool("Running", false); //när man håller ner vänster rörelse knapp så ska spring animationen inte kunna spelas -Simon
+            anim.SetBool("Walking", true); //-||- så ska gå animationen kunna spelas -Simon
 
             transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -63,7 +62,8 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey(right) && Input.GetKey(KeyCode.LeftShift))
         {
-            anim.SetBool("Running", true);
+            anim.SetBool("Running", true); //när man håller ner höger rörelse knapp + spring knappen så ska spring animationen kunna köras  -Simon
+            anim.SetBool("Walking", false); //-||- så ska gå animationen inte kunna köras -Simon
 
             transform.position += new Vector3(sprintspeed, 0, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -72,8 +72,8 @@ public class Player : MonoBehaviour
 
         else if (Input.GetKey(right))
         {
-            anim.SetBool("Running", false);
-            //walk
+            anim.SetBool("Running", false); //när man håller ner höger rörelse knapp så ska spring animationen inte kunna spelas -Simon
+            anim.SetBool("Walking", true); //-||- så ska gå animationen kunna spelas -Simon
 
             transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -82,15 +82,17 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(jump) && grounded)
         {
-            anim.SetBool("Running", false);
-            anim.Play("Jump");
+            anim.SetBool("Running", false); //när man är på marken och trycker på hopp knappen så ska inte spring animationen kunna spelas längre  -Simon
+            anim.SetBool("Walking", false); //-||- så ska inte gå animationen kunna spelas längre -Simon
+            anim.Play("Jump"); // -||- så ska hopp animationen spelas  -Simon
 
             rb.velocity = Vector2.up * JumpVelocity;
         }
 
-        if(!Input.GetKey(right) && !Input.GetKey(left))
+        if(!Input.GetKey(right) && !Input.GetKey(left)) //om man varken håller höger eller vänster rörelse knapp... -Simon 
         {
-            anim.SetBool("Running", false);
+            anim.SetBool("Running", false); //så ska spring animationen inte kunna spelas -Simon
+            anim.SetBool("Walking", false); //så ska gå animationen inte kunna spelas -Simon
         }
 
         UpdatenumberOfTaggedObjects = GameObject.FindGameObjectsWithTag("Trash").Length;
@@ -133,7 +135,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.layer == 6)
+        if (collision.gameObject.layer == 6) //när spelaren landar på marken (lager 6) så kan land animationen spelas -Simon
         {
             anim.SetBool("Land", true);
         }
@@ -141,7 +143,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.gameObject.layer == 6)
+        if(collision.gameObject.layer == 6) //om spelaren lämnar marken (lager 6) så kan land animationen inte spelas längre -Simon
         {
             anim.SetBool("Land", false);
         }

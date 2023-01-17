@@ -107,10 +107,10 @@ TextureImporter:
       name: karaktar_skjuta_pistol-Sheet_0
       rect:
         serializedVersion: 2
-        x: 27
+        x: 0
         y: 0
-        width: 132
-        height: 225
+        width: 189
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,10 +128,10 @@ TextureImporter:
       name: karaktar_skjuta_pistol-Sheet_1
       rect:
         serializedVersion: 2
-        x: 249
+        x: 189
         y: 0
-        width: 108
-        height: 225
+        width: 189
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,10 +149,10 @@ TextureImporter:
       name: karaktar_skjuta_pistol-Sheet_2
       rect:
         serializedVersion: 2
-        x: 450
+        x: 378
         y: 0
-        width: 117
-        height: 216
+        width: 189
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,10 +170,10 @@ TextureImporter:
       name: karaktar_skjuta_pistol-Sheet_3
       rect:
         serializedVersion: 2
-        x: 642
+        x: 567
         y: 0
-        width: 102
-        height: 219
+        width: 189
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,10 +191,10 @@ TextureImporter:
       name: karaktar_skjuta_pistol-Sheet_4
       rect:
         serializedVersion: 2
-        x: 795
+        x: 756
         y: 0
-        width: 135
-        height: 225
+        width: 189
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,10 +212,10 @@ TextureImporter:
       name: karaktar_skjuta_pistol-Sheet_5
       rect:
         serializedVersion: 2
-        x: 972
+        x: 945
         y: 0
-        width: 153
-        height: 231
+        width: 189
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -233,10 +233,10 @@ TextureImporter:
       name: karaktar_skjuta_pistol-Sheet_6
       rect:
         serializedVersion: 2
-        x: 1167
+        x: 1134
         y: 0
-        width: 135
-        height: 219
+        width: 189
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -254,10 +254,10 @@ TextureImporter:
       name: karaktar_skjuta_pistol-Sheet_7
       rect:
         serializedVersion: 2
-        x: 1353
+        x: 1323
         y: 0
-        width: 135
-        height: 222
+        width: 189
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,10 +275,10 @@ TextureImporter:
       name: karaktar_skjuta_pistol-Sheet_8
       rect:
         serializedVersion: 2
-        x: 1548
+        x: 1512
         y: 0
-        width: 120
-        height: 222
+        width: 189
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
