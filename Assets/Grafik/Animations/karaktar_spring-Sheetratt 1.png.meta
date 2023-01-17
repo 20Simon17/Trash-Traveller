@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 48d9dd1e22b2bbe47a81249caa6827f8
+guid: d6e368dd8f7019543a9ff3a39b2b0e90
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,12 +104,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: karaktar_spring-Sheetratt_0
+      name: karaktar_spring-Sheetratt 1_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 298
         y: 0
-        width: 147
+        width: 142
         height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -118,19 +118,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c26635cffba1b01478d11aa116891188
-      internalID: 1406809665
+      spriteID: 56e1b26839712a74f9d5c31aebf48af3
+      internalID: 1121462319
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: karaktar_spring-Sheetratt_1
+      name: karaktar_spring-Sheetratt 1_1
       rect:
         serializedVersion: 2
-        x: 147
+        x: 445
         y: 0
-        width: 147
+        width: 139
         height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -139,19 +139,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9b526fdbdbefce47be94de4a8100cb7
-      internalID: 36274467
+      spriteID: aad96ac85a702b548b53ddaa7b3a8860
+      internalID: 1249905200
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: karaktar_spring-Sheetratt_2
+      name: karaktar_spring-Sheetratt 1_2
       rect:
         serializedVersion: 2
-        x: 294
+        x: 593
         y: 0
-        width: 147
+        width: 138
         height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -160,19 +160,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c5aa525ed0d982458a9a43368855ff7
-      internalID: -1404024903
+      spriteID: 69ce20f04adf86c4f847b8d6f788f082
+      internalID: -967922778
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: karaktar_spring-Sheetratt_3
+      name: karaktar_spring-Sheetratt 1_3
       rect:
         serializedVersion: 2
-        x: 441
+        x: 743
         y: 0
-        width: 147
+        width: 141
         height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -181,92 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87abc86846222ea45959a3b73d8a6c57
-      internalID: -1520500906
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: karaktar_spring-Sheetratt_4
-      rect:
-        serializedVersion: 2
-        x: 588
-        y: 0
-        width: 147
-        height: 240
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2255795cfbdef040b75da5ceec82a05
-      internalID: -1854416290
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: karaktar_spring-Sheetratt_5
-      rect:
-        serializedVersion: 2
-        x: 735
-        y: 0
-        width: 147
-        height: 240
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d9841b30bf4f4554ea9e4e1553937b32
-      internalID: 80619665
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: karaktar_spring-Sheetratt_6
-      rect:
-        serializedVersion: 2
-        x: 882
-        y: 0
-        width: 147
-        height: 240
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fa3b2bef6490c7948835adaec0963251
-      internalID: -74709671
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: karaktar_spring-Sheetratt_7
-      rect:
-        serializedVersion: 2
-        x: 1029
-        y: 0
-        width: 147
-        height: 240
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63965597605c2564ea435f02450f2ba0
-      internalID: -140503254
+      spriteID: 408458e4b0eec6e43a5603b04991ecf6
+      internalID: -1163061948
       vertices: []
       indices: 
       edges: []
@@ -282,14 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      karaktar_spring-Sheetratt_5: 80619665
-      karaktar_spring-Sheetratt_3: -1520500906
-      karaktar_spring-Sheetratt_0: 1406809665
-      karaktar_spring-Sheetratt_1: 36274467
-      karaktar_spring-Sheetratt_2: -1404024903
-      karaktar_spring-Sheetratt_6: -74709671
-      karaktar_spring-Sheetratt_7: -140503254
-      karaktar_spring-Sheetratt_4: -1854416290
+      karaktar_spring-Sheetratt 1_2: -967922778
+      karaktar_spring-Sheetratt 1_1: 1249905200
+      karaktar_spring-Sheetratt 1_0: 1121462319
+      karaktar_spring-Sheetratt 1_3: -1163061948
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
