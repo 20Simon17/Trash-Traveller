@@ -21,15 +21,19 @@ public class Hitpoints : MonoBehaviour
 
     public bool shouldTakeTickDamage = false;
     public bool shouldHeal = true;
+    bool hasDied = false;
 
     public float damageTimer = 1f;
     public float corrosiveTimer = 2.1f;
     public float timeBetweenHeals = 2f;
     public float healCooldown = 3f;
 
+    public Animator anim;
+
     private void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
+        anim = GetComponent<Animator>();
 
         for (int x = 0; x < 20; x++)
         {
@@ -125,7 +129,7 @@ public class Hitpoints : MonoBehaviour
             shouldHeal = false;
         }
 
-        else if(healCooldown <= 0)
+        else if(healCooldown <= 0 && !hasDied)
         {
             shouldHeal = true;
         }
@@ -140,6 +144,14 @@ public class Hitpoints : MonoBehaviour
         {
             hearts[heartsArraySpot].gameObject.SetActive(true);
             heartsArraySpot++;
+        }
+
+        if(playerHP <= 0 && !hasDied)
+        {
+            hasDied = true;
+            anim.SetTrigger("Die");
+            shouldHeal = false;
+            //load death screen?
         }
     }
 }

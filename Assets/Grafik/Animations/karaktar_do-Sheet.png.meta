@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5965c9b2c3021ab44b4e5f375a0460b5
+guid: 166af76bd6d89bf4d825f48464db77bf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,12 +104,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: karaktar_fall-Sheet_0
+      name: karaktar_do-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 132
+        width: 240
         height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -118,19 +118,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7714b064a4fc394db56fa3e0bf05613
-      internalID: -1859633846
+      spriteID: 5e2f8dce59b4e444e9babef37c21894a
+      internalID: -1223449419
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: karaktar_fall-Sheet_1
+      name: karaktar_do-Sheet_1
       rect:
         serializedVersion: 2
-        x: 132
+        x: 240
         y: 0
-        width: 132
+        width: 240
         height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -139,19 +139,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35ed8f3d82a1fc049a7aea46335fedbb
-      internalID: 756510657
+      spriteID: f8548274f815b6948b68e540cd4a313f
+      internalID: 1239213512
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: karaktar_fall-Sheet_2
+      name: karaktar_do-Sheet_2
       rect:
         serializedVersion: 2
-        x: 264
+        x: 480
         y: 0
-        width: 132
+        width: 240
         height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -160,19 +160,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 790b6a0a156835a4dbba24d6f1ccb81a
-      internalID: 1663663068
+      spriteID: 9b4b53a6d9bd88e4f820814d188c41af
+      internalID: -1822979158
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: karaktar_fall-Sheet_3
+      name: karaktar_do-Sheet_3
       rect:
         serializedVersion: 2
-        x: 396
+        x: 720
         y: 0
-        width: 132
+        width: 240
         height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -181,19 +181,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dad63b8d72a2de14a8ec3cc5bb77aec9
-      internalID: -1653123625
+      spriteID: d507d6deb6bc54242b678e3f698e74b1
+      internalID: -1011160274
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: karaktar_fall-Sheet_4
+      name: karaktar_do-Sheet_4
       rect:
         serializedVersion: 2
-        x: 528
+        x: 960
         y: 0
-        width: 132
+        width: 240
         height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -202,19 +202,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c8359e189c5ae84e839801a0e3eabb7
-      internalID: -927303307
+      spriteID: 03af325168706ee4492091ec82c4eab7
+      internalID: 1986616522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: karaktar_fall-Sheet_5
+      name: karaktar_do-Sheet_5
       rect:
         serializedVersion: 2
-        x: 660
+        x: 1200
         y: 0
-        width: 132
+        width: 240
         height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -223,19 +223,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2eb0c1780ad3e814699f71159d2c4a40
-      internalID: -473437843
+      spriteID: aade0f65b46449e439fadf2d8a01e752
+      internalID: 1769663398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: karaktar_fall-Sheet_6
+      name: karaktar_do-Sheet_6
       rect:
         serializedVersion: 2
-        x: 792
+        x: 1440
         y: 0
-        width: 132
+        width: 240
         height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -244,71 +244,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45443490da97db6439ac5ca867987907
-      internalID: -29792136
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: karaktar_fall-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 924
-        y: 0
-        width: 132
-        height: 240
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 079ad3465fdec07478b365315d80329d
-      internalID: 1492600859
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: karaktar_fall-Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 1056
-        y: 0
-        width: 132
-        height: 240
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50e27170b6ac8fb4a90082d730158143
-      internalID: -1017728549
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: karaktar_fall-Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 1188
-        y: 0
-        width: 132
-        height: 240
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e9b61840b5b761842ac2f78f9e242ab3
-      internalID: 347173302
+      spriteID: 3bb294d6a7b148a49b39f0d924fc4302
+      internalID: -1065834446
       vertices: []
       indices: 
       edges: []
@@ -324,16 +261,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      karaktar_fall-Sheet_9: 347173302
-      karaktar_fall-Sheet_6: -29792136
-      karaktar_fall-Sheet_2: 1663663068
-      karaktar_fall-Sheet_4: -927303307
-      karaktar_fall-Sheet_0: -1859633846
-      karaktar_fall-Sheet_8: -1017728549
-      karaktar_fall-Sheet_3: -1653123625
-      karaktar_fall-Sheet_7: 1492600859
-      karaktar_fall-Sheet_1: 756510657
-      karaktar_fall-Sheet_5: -473437843
+      karaktar_do-Sheet_0: -1223449419
+      karaktar_do-Sheet_5: 1769663398
+      karaktar_do-Sheet_3: -1011160274
+      karaktar_do-Sheet_1: 1239213512
+      karaktar_do-Sheet_4: 1986616522
+      karaktar_do-Sheet_2: -1822979158
+      karaktar_do-Sheet_6: -1065834446
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

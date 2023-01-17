@@ -107,10 +107,10 @@ TextureImporter:
       name: karaktar_mark_kontakt-Sheet_0
       rect:
         serializedVersion: 2
-        x: 12
+        x: 0
         y: 0
-        width: 96
-        height: 189
+        width: 117
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f3289dd560326945ae938fa324a636a
-      internalID: 2141153453
+      spriteID: 3eb2a836307178c4fa2c257fb18a8247
+      internalID: 1376719940
       vertices: []
       indices: 
       edges: []
@@ -131,7 +131,7 @@ TextureImporter:
         x: 117
         y: 0
         width: 117
-        height: 177
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,8 +139,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c2b47a4a5064444b944e63c8cc563ae
-      internalID: 1581160700
+      spriteID: 4f798856c9337fc42bbac8d81ea36f06
+      internalID: -1487615805
       vertices: []
       indices: 
       edges: []
@@ -149,10 +149,10 @@ TextureImporter:
       name: karaktar_mark_kontakt-Sheet_2
       rect:
         serializedVersion: 2
-        x: 246
+        x: 234
         y: 0
-        width: 99
-        height: 189
+        width: 117
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d15393e506dadf4449583ff1307dea0d
-      internalID: 625879838
+      spriteID: 48dd3ae0ef7526941b1b324a7cca2f36
+      internalID: -629450864
       vertices: []
       indices: 
       edges: []
@@ -170,10 +170,10 @@ TextureImporter:
       name: karaktar_mark_kontakt-Sheet_3
       rect:
         serializedVersion: 2
-        x: 360
+        x: 351
         y: 0
-        width: 90
-        height: 204
+        width: 117
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f647bb527aca3749979012f382cec87
-      internalID: 980407451
+      spriteID: 8af83d9d3322dfd45bd4c110ffd27157
+      internalID: 1737529405
       vertices: []
       indices: 
       edges: []
@@ -198,10 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      karaktar_mark_kontakt-Sheet_2: 625879838
-      karaktar_mark_kontakt-Sheet_0: 2141153453
-      karaktar_mark_kontakt-Sheet_3: 980407451
-      karaktar_mark_kontakt-Sheet_1: 1581160700
+      karaktar_mark_kontakt-Sheet_2: -629450864
+      karaktar_mark_kontakt-Sheet_0: 1376719940
+      karaktar_mark_kontakt-Sheet_3: 1737529405
+      karaktar_mark_kontakt-Sheet_1: -1487615805
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

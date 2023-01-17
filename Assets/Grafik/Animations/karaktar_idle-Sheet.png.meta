@@ -3,7 +3,7 @@ guid: f9a302bb45780f046a67bb1ca6611ebf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,7 +63,6 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -108,10 +107,10 @@ TextureImporter:
       name: karaktar_idle-Sheet_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
         width: 78
-        height: 225
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0dd663e3e1ad954aa06a98706c10933
-      internalID: -422813701
+      spriteID: 85e52088823df734c917dbc6304a7b17
+      internalID: 122628383
       vertices: []
       indices: 
       edges: []
@@ -129,10 +128,10 @@ TextureImporter:
       name: karaktar_idle-Sheet_1
       rect:
         serializedVersion: 2
-        x: 82
+        x: 78
         y: 0
-        width: 77
-        height: 222
+        width: 78
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +139,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30ecc1bb8dbc9da48b22186ebd6f9511
-      internalID: 907808148
+      spriteID: c5c1e34b27ed4084b8b57b14579cf02b
+      internalID: 1625096604
       vertices: []
       indices: 
       edges: []
@@ -157,8 +156,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      karaktar_idle-Sheet_0: -422813701
-      karaktar_idle-Sheet_1: 907808148
+      karaktar_idle-Sheet_0: 122628383
+      karaktar_idle-Sheet_1: 1625096604
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

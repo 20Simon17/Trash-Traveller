@@ -969,5 +969,9 @@ PrefabInstance:
       propertyPath: halfHearts
       value: 
       objectReference: {fileID: 1819460666}
+    - target: {fileID: 6024401441799124135, guid: 9b8ed8d2ee18ad748878ccb689f95860, type: 3}
+      propertyPath: JumpVelocity
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b8ed8d2ee18ad748878ccb689f95860, type: 3}

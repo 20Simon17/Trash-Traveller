@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5965c9b2c3021ab44b4e5f375a0460b5
+guid: e92af4dac9fff28428c2bd2abd72ebd6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: karaktar_fall-Sheet_0
+      name: karaktar_skjuta_pistol-Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 27
         y: 0
         width: 132
-        height: 240
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7714b064a4fc394db56fa3e0bf05613
-      internalID: -1859633846
+      spriteID: ae9f035e23eaddd45bd643ff85280aec
+      internalID: 2064240953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: karaktar_fall-Sheet_1
+      name: karaktar_skjuta_pistol-Sheet_1
       rect:
         serializedVersion: 2
-        x: 132
+        x: 249
         y: 0
-        width: 132
-        height: 240
+        width: 108
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35ed8f3d82a1fc049a7aea46335fedbb
-      internalID: 756510657
+      spriteID: 17f87aa8d51d37a4dba2f6a7a0559c05
+      internalID: 1628870707
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: karaktar_fall-Sheet_2
+      name: karaktar_skjuta_pistol-Sheet_2
       rect:
         serializedVersion: 2
-        x: 264
+        x: 450
         y: 0
-        width: 132
-        height: 240
+        width: 117
+        height: 216
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 790b6a0a156835a4dbba24d6f1ccb81a
-      internalID: 1663663068
+      spriteID: cb1fe74c037c8224ab222d9c59c74a0e
+      internalID: 887005995
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: karaktar_fall-Sheet_3
+      name: karaktar_skjuta_pistol-Sheet_3
       rect:
         serializedVersion: 2
-        x: 396
+        x: 642
         y: 0
-        width: 132
-        height: 240
+        width: 102
+        height: 219
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dad63b8d72a2de14a8ec3cc5bb77aec9
-      internalID: -1653123625
+      spriteID: fa4e7d587922e7e4d9aec2a47b82f9a3
+      internalID: 823763858
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: karaktar_fall-Sheet_4
+      name: karaktar_skjuta_pistol-Sheet_4
       rect:
         serializedVersion: 2
-        x: 528
+        x: 795
         y: 0
-        width: 132
-        height: 240
+        width: 135
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c8359e189c5ae84e839801a0e3eabb7
-      internalID: -927303307
+      spriteID: 5c5dce0e839bc94449ba4144d65b036c
+      internalID: 650631248
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: karaktar_fall-Sheet_5
+      name: karaktar_skjuta_pistol-Sheet_5
       rect:
         serializedVersion: 2
-        x: 660
+        x: 972
         y: 0
-        width: 132
-        height: 240
+        width: 153
+        height: 231
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,20 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2eb0c1780ad3e814699f71159d2c4a40
-      internalID: -473437843
+      spriteID: a794161217641b54ca9455526a27f743
+      internalID: 1194278121
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: karaktar_fall-Sheet_6
+      name: karaktar_skjuta_pistol-Sheet_6
       rect:
         serializedVersion: 2
-        x: 792
+        x: 1167
         y: 0
-        width: 132
-        height: 240
+        width: 135
+        height: 219
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45443490da97db6439ac5ca867987907
-      internalID: -29792136
+      spriteID: f739bcbc1cfd0614ab4527597e1225d9
+      internalID: 35674775
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: karaktar_fall-Sheet_7
+      name: karaktar_skjuta_pistol-Sheet_7
       rect:
         serializedVersion: 2
-        x: 924
+        x: 1353
         y: 0
-        width: 132
-        height: 240
+        width: 135
+        height: 222
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,20 +265,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 079ad3465fdec07478b365315d80329d
-      internalID: 1492600859
+      spriteID: aa72f6662e5fd3647882b348c6c7648e
+      internalID: 976240375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: karaktar_fall-Sheet_8
+      name: karaktar_skjuta_pistol-Sheet_8
       rect:
         serializedVersion: 2
-        x: 1056
+        x: 1548
         y: 0
-        width: 132
-        height: 240
+        width: 120
+        height: 222
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,29 +286,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50e27170b6ac8fb4a90082d730158143
-      internalID: -1017728549
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: karaktar_fall-Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 1188
-        y: 0
-        width: 132
-        height: 240
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e9b61840b5b761842ac2f78f9e242ab3
-      internalID: 347173302
+      spriteID: 30f48a4a5b16677469a15ea21b9ea9c1
+      internalID: 1980374781
       vertices: []
       indices: 
       edges: []
@@ -324,16 +303,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      karaktar_fall-Sheet_9: 347173302
-      karaktar_fall-Sheet_6: -29792136
-      karaktar_fall-Sheet_2: 1663663068
-      karaktar_fall-Sheet_4: -927303307
-      karaktar_fall-Sheet_0: -1859633846
-      karaktar_fall-Sheet_8: -1017728549
-      karaktar_fall-Sheet_3: -1653123625
-      karaktar_fall-Sheet_7: 1492600859
-      karaktar_fall-Sheet_1: 756510657
-      karaktar_fall-Sheet_5: -473437843
+      karaktar_skjuta_pistol-Sheet_0: 2064240953
+      karaktar_skjuta_pistol-Sheet_3: 823763858
+      karaktar_skjuta_pistol-Sheet_8: 1980374781
+      karaktar_skjuta_pistol-Sheet_5: 1194278121
+      karaktar_skjuta_pistol-Sheet_6: 35674775
+      karaktar_skjuta_pistol-Sheet_1: 1628870707
+      karaktar_skjuta_pistol-Sheet_7: 976240375
+      karaktar_skjuta_pistol-Sheet_2: 887005995
+      karaktar_skjuta_pistol-Sheet_4: 650631248
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
