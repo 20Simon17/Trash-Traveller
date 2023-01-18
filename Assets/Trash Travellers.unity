@@ -263,7 +263,7 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 1
-  bullet: {fileID: 4964558548863581879, guid: 7539ee0a704602f4bb69958e5f004735, type: 3}
+  bullet: {fileID: 1453027730326705162, guid: 7b3d8412b045ccc4c88a7a442e659980, type: 3}
 --- !u!61 &784434753
 BoxCollider2D:
   m_ObjectHideFlags: 0

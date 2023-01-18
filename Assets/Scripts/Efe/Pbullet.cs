@@ -6,7 +6,6 @@ public class Pbullet : MonoBehaviour
 {
         private void Update()
         {
-            transform.position += transform.up * Time.deltaTime * 10;
-            print("moving");
+            transform.position += transform.up * Time.deltaTime * 100;
         }
 }
