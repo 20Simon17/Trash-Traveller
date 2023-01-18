@@ -98,7 +98,6 @@ GameObject:
   - component: {fileID: 6024401441799124129}
   - component: {fileID: 6024401441799124128}
   - component: {fileID: 6024401441799124135}
-  - component: {fileID: 6024401441799124134}
   - component: {fileID: 6024401441799124133}
   - component: {fileID: 6024401441799124061}
   - component: {fileID: 6024401441799124062}
@@ -277,18 +276,6 @@ MonoBehaviour:
   rend: {fileID: 6024401441799124131}
   numberOfTaggedObjects: 0
   UpdatenumberOfTaggedObjects: 0
---- !u!114 &6024401441799124134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6024401441799124132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37f16334d3229a84e9f06b9e3d3f5f57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   Timemachinee: 0
   buttons: {fileID: 0}
 --- !u!114 &6024401441799124133
