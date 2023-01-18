@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Hitpoints : MonoBehaviour
 {
-    //litet skräp hp = 4
-    //stort skräp hp = 7
-
     public float playerHP = 10;
 
     public GameObject[] hearts;
@@ -23,10 +21,15 @@ public class Hitpoints : MonoBehaviour
     public bool shouldHeal = true;
     bool hasDied = false;
 
-    public float damageTimer = 1f;
-    public float corrosiveTimer = 2.1f;
-    public float timeBetweenHeals = 2f;
-    public float healCooldown = 3f;
+    public float damageTimer;
+    public float corrosiveTimer;
+    public float timeBetweenHeals;
+    public float healCooldown;
+
+    float damageTimerOriginal;
+    float corrosiveTimerOriginal;
+    float timeBetweenHealsOriginal;
+    float healCooldownOriginal;
 
     public Animator anim;
 
@@ -34,6 +37,11 @@ public class Hitpoints : MonoBehaviour
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
+
+        damageTimerOriginal = damageTimer;
+        corrosiveTimerOriginal = corrosiveTimer;
+        timeBetweenHealsOriginal = timeBetweenHeals;
+        healCooldownOriginal = healCooldown;
 
         for (int x = 0; x < 20; x++)
         {
@@ -57,13 +65,13 @@ public class Hitpoints : MonoBehaviour
         {
             shouldTakeTickDamage = true;
             shouldHeal = false;
-            damageTimer = 1f;
+            damageTimer = damageTimerOriginal;
         }
 
         if(collision.gameObject.layer == 9)
         {
             playerHP -= 1f;
-            healCooldown = 3f;
+            healCooldown = healCooldownOriginal;
             Destroy(collision.gameObject);
         }
     }
@@ -75,10 +83,10 @@ public class Hitpoints : MonoBehaviour
             shouldTakeTickDamage = false;
             shouldHeal = true;
 
-            timeBetweenHeals = 2f;
-            damageTimer = 1f;
-            corrosiveTimer = 2.1f;
-            healCooldown = 3f;
+            timeBetweenHeals = timeBetweenHealsOriginal;
+            damageTimer = damageTimerOriginal;
+            corrosiveTimer = corrosiveTimerOriginal;
+            healCooldown = healCooldownOriginal;
         }
     }
 
@@ -93,9 +101,9 @@ public class Hitpoints : MonoBehaviour
         {
             if(damageTimer <= 0)
             {
-                damageTimer = 1f;
+                damageTimer = damageTimerOriginal;
                 playerHP -= 0.5f;
-                healCooldown = 3f;
+                healCooldown = healCooldownOriginal;
             }
         }
 
@@ -103,9 +111,9 @@ public class Hitpoints : MonoBehaviour
         {
             if(damageTimer <= 0f)
             {
-                damageTimer = 1f;
+                damageTimer = damageTimerOriginal;
                 playerHP -= 0.5f;
-                healCooldown = 3f;
+                healCooldown = healCooldownOriginal;
             }
         }
 
@@ -113,7 +121,7 @@ public class Hitpoints : MonoBehaviour
         {
             if(timeBetweenHeals <= 0f)
             {
-                timeBetweenHeals = 2f;
+                timeBetweenHeals = timeBetweenHealsOriginal;
                 playerHP += 0.5f;
             }
         }
@@ -151,7 +159,11 @@ public class Hitpoints : MonoBehaviour
             hasDied = true;
             anim.SetTrigger("Die");
             shouldHeal = false;
-            //load death screen?
         }
+    }
+
+    void BackToMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }

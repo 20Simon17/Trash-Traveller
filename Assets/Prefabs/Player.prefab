@@ -270,10 +270,10 @@ MonoBehaviour:
   jump: 32
   rb: {fileID: 0}
   grounded: 0
-  JumpVelocity: 8
+  JumpVelocity: 6
   trashbar: 10
   trashList: []
-  anim: {fileID: 0}
+  anim: {fileID: 6024401441799124061}
   rend: {fileID: 6024401441799124131}
   numberOfTaggedObjects: 0
   UpdatenumberOfTaggedObjects: 0
