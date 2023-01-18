@@ -11,11 +11,6 @@ public class Timemachine : MonoBehaviour
 
     public GameObject buttons;
 
-    private void Start()
-    {
-        
-    }
-
     public void OnTriggerStay2D(Collider2D collision)
     {
         
