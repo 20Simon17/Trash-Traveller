@@ -269,11 +269,13 @@ MonoBehaviour:
   jump: 32
   rb: {fileID: 0}
   grounded: 0
-  JumpVelocity: 8
+  JumpVelocity: 6
   trashbar: 10
   trashList: []
-  anim: {fileID: 0}
+  anim: {fileID: 6024401441799124061}
   rend: {fileID: 6024401441799124131}
+  numberOfTaggedObjects: 0
+  UpdatenumberOfTaggedObjects: 0
 --- !u!114 &6024401441799124134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,6 +332,7 @@ MonoBehaviour:
   corrosiveTimer: 2.1
   timeBetweenHeals: 2
   healCooldown: 3
+  anim: {fileID: 0}
 --- !u!95 &6024401441799124061
 Animator:
   serializedVersion: 4
