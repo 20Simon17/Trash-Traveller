@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 6024401441799124133}
   - component: {fileID: 6024401441799124061}
   - component: {fileID: 6024401441799124062}
+  - component: {fileID: 7445912823746878510}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -274,6 +275,8 @@ MonoBehaviour:
   trashList: []
   anim: {fileID: 0}
   rend: {fileID: 6024401441799124131}
+  numberOfTaggedObjects: 0
+  UpdatenumberOfTaggedObjects: 0
 --- !u!114 &6024401441799124134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,6 +333,7 @@ MonoBehaviour:
   corrosiveTimer: 2.1
   timeBetweenHeals: 2
   healCooldown: 3
+  anim: {fileID: 0}
 --- !u!95 &6024401441799124061
 Animator:
   serializedVersion: 4
@@ -370,3 +374,16 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 1
   m_CullingType: 0
+--- !u!114 &7445912823746878510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6024401441799124132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab57406d38efac748819eee5fb158a29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Paus: {fileID: 0}
