@@ -30,11 +30,17 @@ public class Player : MonoBehaviour
 
     public float UpdatenumberOfTaggedObjects;
 
+    [SerializeField]
+    KeyCode Timemachinee;
+
+    public GameObject buttons;
+
     void Start()
     {
         rb = transform.GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>(); //referens till animatorn på spelaren -Simon
         numberOfTaggedObjects = GameObject.FindGameObjectsWithTag("Trash").Length;
+        //hittar objectsen med tagen Trash
     }
 
     void Update()
@@ -47,6 +53,7 @@ public class Player : MonoBehaviour
             transform.position -= new Vector3(sprintspeed, 0, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
             rend.flipX = false;
+            //håll in Lskift för att springa snabbare tillsammans med vanliga left knappen.
 
         }
 
@@ -58,6 +65,7 @@ public class Player : MonoBehaviour
             transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
             rend.flipX = false;
+            //well, ja movement åt vänster:)
         }
 
         if (Input.GetKey(right) && Input.GetKey(KeyCode.LeftShift))
@@ -68,6 +76,7 @@ public class Player : MonoBehaviour
             transform.position += new Vector3(sprintspeed, 0, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
             rend.flipX = true;
+            //håll in Lskift för att springa snabbare tillsammans med vanliga right knappen.
         }
 
         else if (Input.GetKey(right))
@@ -78,6 +87,7 @@ public class Player : MonoBehaviour
             transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
             rend.flipX = true;
+            //well, ja movement åt höger:)
         }
 
         if (Input.GetKeyDown(jump) && grounded)
@@ -87,6 +97,7 @@ public class Player : MonoBehaviour
             anim.Play("Jump"); // -||- så ska hopp animationen spelas  -Simon
 
             rb.velocity = Vector2.up * JumpVelocity;
+            //hittar rb för att hoppa
         }
 
         if(!Input.GetKey(right) && !Input.GetKey(left)) //om man varken håller höger eller vänster rörelse knapp... -Simon 
@@ -104,6 +115,7 @@ public class Player : MonoBehaviour
         {  
             grounded = true;
         }
+        //den här och den under är det som gör att man bara kan hoppa när man är på layer 6
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -112,6 +124,7 @@ public class Player : MonoBehaviour
         {
             grounded = false;
         }
+        // -||-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -133,6 +146,7 @@ public class Player : MonoBehaviour
                     trashbar = 0;
                 }
             }
+           //den här koden kopplar ihop hur många object med tagen trash från början till hur många det finns kvar genom att dela och sen gångra med höger för att den ska ta bort en plats i listan för trashbaren när 10 % försvunnit och sen 20% och så vidare
         }
 
         if (collision.gameObject.layer == 6) //när spelaren landar på marken (lager 6) så kan land animationen spelas -Simon
@@ -147,5 +161,17 @@ public class Player : MonoBehaviour
         {
             anim.SetBool("Land", false);
         }
+    }
+
+    public void OnTriggerStay2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.tag == "Timemachine" && Input.GetKey(Timemachinee) && UpdatenumberOfTaggedObjects == 0)
+        {
+            Debug.Log("hargjort");
+            buttons.SetActive(true);
+        }
+
+        //det här gör så att timemachine canvasen kommer upp när man klickar E men bara om man har städat klart alltså att det inte finns några taggade objects kvar i scenen.
     }
 }

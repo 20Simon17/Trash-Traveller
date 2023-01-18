@@ -19,4 +19,6 @@ public class BUTTONS : MonoBehaviour
     {
         Application.Quit();
     }
+
+    //Menyknappar
 }
