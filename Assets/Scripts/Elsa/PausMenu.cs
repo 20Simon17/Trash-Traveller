@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PausMenu : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class PausMenu : MonoBehaviour
         }
     }
 
+    
     public void Resume()
     {
         Paus.SetActive(false);
@@ -37,4 +39,11 @@ public class PausMenu : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
+
+    public void Quittomain()
+    {
+        SceneManager.LoadScene(8);
+    }
+
+    //två voids som startar/pausar spelet och tar fram en canvas
 }
