@@ -44,4 +44,6 @@ public class Timetraveller : MonoBehaviour
     {
         SceneManager.LoadScene(7);
     }
+
+    //knaparna till timetravell canvasen (referar till player canvas timemachinee)
 }
