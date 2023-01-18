@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
             transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
             rend.flipX = false;
-            //well, ja movement åt vänster:)
+            //movement åt vänster:)
         }
 
         if (Input.GetKey(right) && Input.GetKey(KeyCode.LeftShift))
@@ -87,7 +87,7 @@ public class Player : MonoBehaviour
             transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
             rend.flipX = true;
-            //well, ja movement åt höger:)
+            //movement åt höger:)
         }
 
         if (Input.GetKeyDown(jump) && grounded)

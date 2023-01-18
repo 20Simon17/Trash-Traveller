@@ -18,6 +18,10 @@ public class Enemies : MonoBehaviour
     Vector3 playerPos;
     Animator anim;
 
+    float diffrence;
+
+    public SpriteRenderer rend;
+
     private void Start()
     {
         player = FindObjectOfType<Player>();
@@ -46,6 +50,18 @@ public class Enemies : MonoBehaviour
         if(hp <= 0)
         {
             Destroy(gameObject);
+        }
+
+        diffrence = player.transform.position.x - transform.position.x;
+
+        if (diffrence >= 0)
+        {
+            rend.flipX = true;
+        }
+
+        else if (diffrence <= 0)
+        {
+            rend.flipX = false;
         }
     }
 }
