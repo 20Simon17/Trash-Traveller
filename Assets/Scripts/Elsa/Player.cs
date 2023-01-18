@@ -6,93 +6,104 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public float speed;
-
     public float sprintspeed;
 
-    [SerializeField]
-    KeyCode Left;
+    public KeyCode left = KeyCode.A;
+    public KeyCode right = KeyCode.D;
+    public KeyCode jump = KeyCode.Space;
 
-    [SerializeField]
-    KeyCode Right;
-
-    [SerializeField]
-    KeyCode Jump;
-
-    [SerializeField]
-    float reload;
-
-    [SerializeField]
-    Vector3 direction = new Vector3(1, 0, 0);
-
-    public Rigidbody2D rigidbody2d;
+    public Rigidbody2D rb;
 
     public bool grounded;
 
     public int JumpVelocity;
 
-    public int trashbar = 10;
+    public int trashbar = 9;
 
     public List<Image> trashList;
 
+    public Animator anim;
 
-    // Start is called before the first frame update
+    public SpriteRenderer rend;
+
+    public float numberOfTaggedObjects;
+
+    public float UpdatenumberOfTaggedObjects;
+
     void Start()
     {
-        rigidbody2d = transform.GetComponent<Rigidbody2D>();
+        rb = transform.GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>(); //referens till animatorn på spelaren -Simon
+        numberOfTaggedObjects = GameObject.FindGameObjectsWithTag("Trash").Length;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        reload += Time.deltaTime;
-        if (Physics2D.BoxCast(transform.position, new Vector2(1, 0.25f), 0, -transform.up, 2))
+        if (Input.GetKey(left) && Input.GetKey(KeyCode.LeftShift))
         {
-           
-        }
-
-        //Det här är till för att spelaren bara ska kunna hoppa när den rör vid platformarna.
-        if (Input.GetKey(Left) && Input.GetKey(KeyCode.LeftShift))
-        {
+            anim.SetBool("Running", true); //när man håller ner vänster rörelse knapp + spring knappen så ska spring animationen kunna köras -Simon
+            anim.SetBool("Walking", false); //-||- så ska gå animationen inte kunna köras -Simon
 
             transform.position -= new Vector3(sprintspeed, 0, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
+            rend.flipX = false;
 
         }
 
-        else if (Input.GetKey(Left))
+        else if (Input.GetKey(left))
         {
+            anim.SetBool("Running", false); //när man håller ner vänster rörelse knapp så ska spring animationen inte kunna spelas -Simon
+            anim.SetBool("Walking", true); //-||- så ska gå animationen kunna spelas -Simon
+
             transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
+            rend.flipX = false;
         }
 
-        if (Input.GetKey(Right) && Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(right) && Input.GetKey(KeyCode.LeftShift))
         {
+            anim.SetBool("Running", true); //när man håller ner höger rörelse knapp + spring knappen så ska spring animationen kunna köras  -Simon
+            anim.SetBool("Walking", false); //-||- så ska gå animationen inte kunna köras -Simon
 
             transform.position += new Vector3(sprintspeed, 0, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
-
+            rend.flipX = true;
         }
 
-        else if (Input.GetKey(Right))
+        else if (Input.GetKey(right))
         {
+            anim.SetBool("Running", false); //när man håller ner höger rörelse knapp så ska spring animationen inte kunna spelas -Simon
+            anim.SetBool("Walking", true); //-||- så ska gå animationen kunna spelas -Simon
+
             transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
+            rend.flipX = true;
         }
 
-        if (Input.GetKeyDown(Jump) && grounded)
+        if (Input.GetKeyDown(jump) && grounded)
         {
-            rigidbody2d.velocity = Vector2.up * JumpVelocity;
+            anim.SetBool("Running", false); //när man är på marken och trycker på hopp knappen så ska inte spring animationen kunna spelas längre  -Simon
+            anim.SetBool("Walking", false); //-||- så ska inte gå animationen kunna spelas längre -Simon
+            anim.Play("Jump"); // -||- så ska hopp animationen spelas  -Simon
+
+            rb.velocity = Vector2.up * JumpVelocity;
         }
 
+        if(!Input.GetKey(right) && !Input.GetKey(left)) //om man varken håller höger eller vänster rörelse knapp... -Simon 
+        {
+            anim.SetBool("Running", false); //så ska spring animationen inte kunna spelas -Simon
+            anim.SetBool("Walking", false); //så ska gå animationen inte kunna spelas -Simon
+        }
+
+        UpdatenumberOfTaggedObjects = GameObject.FindGameObjectsWithTag("Trash").Length;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 6)
-        {
+        {  
             grounded = true;
         }
-
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -105,15 +116,36 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+        print((UpdatenumberOfTaggedObjects / numberOfTaggedObjects) * 100 % 10f);
+        
         if (collision.gameObject.tag == "Trash")
         {
-            trashList[trashbar].gameObject.SetActive(false);
-            trashbar--;
+            Destroy(collision.gameObject);
 
-            if (trashbar <= 0)
+            if (((UpdatenumberOfTaggedObjects / numberOfTaggedObjects) * 100) % 10f == 5)
             {
-                trashbar = 0;
+                trashList[trashbar].gameObject.SetActive(false);
+                trashbar--;
+
+                if (trashbar <= 0)
+                {
+                    trashbar = 0;
+                }
             }
+        }
+
+        if (collision.gameObject.layer == 6) //när spelaren landar på marken (lager 6) så kan land animationen spelas -Simon
+        {
+            anim.SetBool("Land", true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == 6) //om spelaren lämnar marken (lager 6) så kan land animationen inte spelas längre -Simon
+        {
+            anim.SetBool("Land", false);
         }
     }
 }

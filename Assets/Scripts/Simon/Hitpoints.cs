@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Hitpoints : MonoBehaviour
 {
-    //litet skräp hp = 4
-    //stort skräp hp = 7
-
     public float playerHP = 10;
 
     public GameObject[] hearts;
@@ -19,17 +17,31 @@ public class Hitpoints : MonoBehaviour
     int fH = 0;
     int hH = 0;
 
-    bool shouldTakeTickDamage = false;
-    bool shouldHeal = true;
+    public bool shouldTakeTickDamage = false;
+    public bool shouldHeal = true;
+    bool hasDied = false;
 
-    public float damageTimer = 1f;
-    public float corrosiveTimer = 2.1f;
-    public float timeBetweenHeals = 5f;
-    public float healCooldown = 10f;
+    public float damageTimer;
+    public float corrosiveTimer;
+    public float timeBetweenHeals;
+    public float healCooldown;
+
+    float damageTimerOriginal;
+    float corrosiveTimerOriginal;
+    float timeBetweenHealsOriginal;
+    float healCooldownOriginal;
+
+    public Animator anim;
 
     private void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
+        anim = GetComponent<Animator>();
+
+        damageTimerOriginal = damageTimer;
+        corrosiveTimerOriginal = corrosiveTimer;
+        timeBetweenHealsOriginal = timeBetweenHeals;
+        healCooldownOriginal = healCooldown;
 
         for (int x = 0; x < 20; x++)
         {
@@ -53,13 +65,13 @@ public class Hitpoints : MonoBehaviour
         {
             shouldTakeTickDamage = true;
             shouldHeal = false;
-            damageTimer = 1f;
+            damageTimer = damageTimerOriginal;
         }
 
         if(collision.gameObject.layer == 9)
         {
             playerHP -= 1f;
-            healCooldown = 10f;
+            healCooldown = healCooldownOriginal;
             Destroy(collision.gameObject);
         }
     }
@@ -71,9 +83,10 @@ public class Hitpoints : MonoBehaviour
             shouldTakeTickDamage = false;
             shouldHeal = true;
 
-            timeBetweenHeals = 5f;
-            damageTimer = 1f;
-            corrosiveTimer = 2.1f;
+            timeBetweenHeals = timeBetweenHealsOriginal;
+            damageTimer = damageTimerOriginal;
+            corrosiveTimer = corrosiveTimerOriginal;
+            healCooldown = healCooldownOriginal;
         }
     }
 
@@ -82,15 +95,15 @@ public class Hitpoints : MonoBehaviour
         damageTimer -= Time.deltaTime;
         corrosiveTimer -= Time.deltaTime;
         timeBetweenHeals -= Time.deltaTime;
-
-        //playerHPtext.text = "HP: " + playerHP.ToString();
+        healCooldown -= Time.deltaTime;
 
         if (corrosiveTimer >= 0)
         {
             if(damageTimer <= 0)
             {
-                damageTimer = 1f;
+                damageTimer = damageTimerOriginal;
                 playerHP -= 0.5f;
+                healCooldown = healCooldownOriginal;
             }
         }
 
@@ -98,8 +111,9 @@ public class Hitpoints : MonoBehaviour
         {
             if(damageTimer <= 0f)
             {
-                damageTimer = 1f;
+                damageTimer = damageTimerOriginal;
                 playerHP -= 0.5f;
+                healCooldown = healCooldownOriginal;
             }
         }
 
@@ -107,7 +121,7 @@ public class Hitpoints : MonoBehaviour
         {
             if(timeBetweenHeals <= 0f)
             {
-                timeBetweenHeals = 5f;
+                timeBetweenHeals = timeBetweenHealsOriginal;
                 playerHP += 0.5f;
             }
         }
@@ -123,7 +137,7 @@ public class Hitpoints : MonoBehaviour
             shouldHeal = false;
         }
 
-        else if(healCooldown <= 0)
+        else if(healCooldown <= 0 && !hasDied)
         {
             shouldHeal = true;
         }
@@ -139,5 +153,17 @@ public class Hitpoints : MonoBehaviour
             hearts[heartsArraySpot].gameObject.SetActive(true);
             heartsArraySpot++;
         }
+
+        if(playerHP <= 0 && !hasDied)
+        {
+            hasDied = true;
+            anim.SetTrigger("Die");
+            shouldHeal = false;
+        }
+    }
+
+    void BackToMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }
