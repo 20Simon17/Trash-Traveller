@@ -137,7 +137,6 @@ public class Player : MonoBehaviour
         
         if (collision.gameObject.tag == "Trash")
         {
-            Destroy(collision.gameObject);
 
             if (((UpdatenumberOfTaggedObjects / numberOfTaggedObjects) * 100) % 10f == 5)
             {
