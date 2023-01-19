@@ -19,6 +19,8 @@ public class Shooting : MonoBehaviour
     public LayerMask mask;
 
     public GameObject bullet;
+
+    private bool m_facingright = true;
     
 
     private void Update()
@@ -48,7 +50,7 @@ public class Shooting : MonoBehaviour
     {
         print("shot");
 
-        Vector2 dir = (rotatePoint.position - firepoint.position).normalized;
+        Vector2 dir = -(rotatePoint.position - firepoint.position).normalized;
 
         RaycastHit2D hitinfo = Physics2D.Raycast(firepoint.position, dir, 60f, mask);
 
@@ -75,5 +77,7 @@ public class Shooting : MonoBehaviour
         yield return new WaitForSeconds(0.02f);
 
     }
+
+    
 
 }
