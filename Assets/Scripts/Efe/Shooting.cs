@@ -23,8 +23,6 @@ public class Shooting : MonoBehaviour
 
     public GameObject bullet;
 
-    private bool m_facingright = true;
-
     Player player; //Simon
 
     private void Start() //Simon
