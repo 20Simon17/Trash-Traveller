@@ -30,6 +30,8 @@ public class Player : MonoBehaviour
 
     public float UpdatenumberOfTaggedObjects;
 
+    [SerializeField] private AudioSource jumpSound;
+
     [SerializeField]
     KeyCode Timemachinee;
 
@@ -98,6 +100,7 @@ public class Player : MonoBehaviour
 
             rb.velocity = Vector2.up * JumpVelocity;
             //hittar rb för att hoppa
+            jumpSound.Play();
         }
 
         if(!Input.GetKey(right) && !Input.GetKey(left)) //om man varken håller höger eller vänster rörelse knapp... -Simon 
