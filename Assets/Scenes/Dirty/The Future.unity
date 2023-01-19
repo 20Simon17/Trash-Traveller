@@ -1710,6 +1710,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8468b826931b114d8847f5e0694d6b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  footstepsSound: {fileID: 1369794701}
+  sprintSound: {fileID: 1369794700}
 --- !u!82 &1369794700
 AudioSource:
   m_ObjectHideFlags: 0
