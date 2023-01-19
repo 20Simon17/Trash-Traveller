@@ -46,6 +46,10 @@ public class Enemies : MonoBehaviour
                 Instantiate(bullet, transform.position, Quaternion.identity);
             }
         }
+        else
+        {
+            anim.SetBool("IsMedievalTrash", true);
+        }
 
         if(hp <= 0)
         {
