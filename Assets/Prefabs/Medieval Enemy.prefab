@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b981857e330162140bc6b4326ac8680a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 5
+  hp: 3
   modernEnemy: 0
   bullet: {fileID: 414661697290334632, guid: 717cec9f2c8519f44b1268a3ff98819c, type: 3}
   pistolShootDelay: 0

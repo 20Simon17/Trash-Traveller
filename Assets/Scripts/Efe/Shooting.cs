@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+    public bool usingPistol; //för att kolla vilken animation som ska spelas när man skjuter :) -Simon
+    public bool usingCrossbow; //för att kolla vilken animation som ska spelas när man skjuter :) -Simon
+
     public Transform firepoint;
 
     public Transform rotatePoint;
@@ -21,15 +24,21 @@ public class Shooting : MonoBehaviour
     public GameObject bullet;
 
     private bool m_facingright = true;
-    
+
+    Player player; //Simon
+
+    private void Start() //Simon
+    {
+        player = FindObjectOfType<Player>(); //hämtar spelar koden i scenen (finns bara 1)
+    }
 
     private void Update()
     {
         if (Input.GetMouseButtonDown(0) && canFire)
         {
-            StartCoroutine (Shoot());
+            StartCoroutine(Shoot());
 
-            canFire = false;    
+            canFire = false;
         }
 
         if (!canFire)
@@ -48,8 +57,6 @@ public class Shooting : MonoBehaviour
 
     IEnumerator Shoot()
     {
-        print("shot");
-
         Vector2 dir = -(rotatePoint.position - firepoint.position).normalized;
 
         RaycastHit2D hitinfo = Physics2D.Raycast(firepoint.position, dir, 60f, mask);
@@ -58,26 +65,16 @@ public class Shooting : MonoBehaviour
 
         newBullet.transform.up = dir;
 
-        if (hitinfo)
-        {
-            print("raycast hit");
-          
-            Enemy enemy = hitinfo.transform.GetComponent<Enemy>();
-
-            if (enemy != null)
-            {
-                enemy.TakeDamage(damage);
-
-                print("enemy hit");
-            }
-
-            
-        }
-
         yield return new WaitForSeconds(0.02f);
 
+        if (usingPistol)
+        {
+            player.anim.SetTrigger("PistolShoot");
+        }
+
+        else if (usingCrossbow)
+        {
+            player.anim.SetTrigger("CrossbowShoot");
+        }
     }
-
-    
-
 }

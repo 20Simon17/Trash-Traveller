@@ -4230,11 +4230,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9848433d5154fd24ab3230ebc7f637fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usingPistol: 0
+  usingCrossbow: 1
   firepoint: {fileID: 381088969}
   rotatePoint: {fileID: 402223450}
-  damage: 40
+  damage: 1
   canFire: 1
-  TimebetweeenFiring: 0
+  TimebetweeenFiring: 1
   mask:
     serializedVersion: 2
     m_Bits: 1
