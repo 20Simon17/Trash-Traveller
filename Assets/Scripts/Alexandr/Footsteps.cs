@@ -10,7 +10,8 @@ public class footsteps : MonoBehaviour
 
 {
 
-    public AudioSource footstepsSound, sprintSound;
+    public AudioSource footstepsSound;
+    public AudioSource sprintSound;
 
 
 
