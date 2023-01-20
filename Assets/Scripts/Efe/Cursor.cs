@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class Cursor : MonoBehaviour
 {
-    private Camera maincam;
+    private Camera maincam; // -Efe
 
-    private Vector3 mousePos;
+    private Vector3 mousePos; // -Efe
 
-    public Transform BulletTransform;
+    public Transform BulletTransform; // -Efe
 
 
-    void Start()
+    void Start() // -Efe
     {
         maincam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 
-    void Update()
+    void Update() // -Efe
     {
         mousePos = maincam.ScreenToWorldPoint(Input.mousePosition);
 
@@ -26,4 +26,6 @@ public class Cursor : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(0, 0, rotZ);
     }
+
+   
 }
