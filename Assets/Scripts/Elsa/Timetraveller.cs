@@ -8,41 +8,41 @@ public class Timetraveller : MonoBehaviour
     
     public void Medieval()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Medieval");
     }
     public void NewYork()
     {
 
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("New York");
     }
 
     public void Future()
     { 
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("The Future");
     }
 
     public void FutureClean()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene("The Future clean");
     }
 
     public void MedievalClean()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("Medieval clean");
     }
 
     public void NewYorkClean()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene("New York clean");
     }
 
     public void TheFutureHalfClean()
     {
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene("The Future half clean");
     }
     public void MedievalHalfClean()
     {
-        SceneManager.LoadScene(7);
+        SceneManager.LoadScene("Medieval half clean");
     }
 
     //knaparna till timetravell canvasen (referar till player canvas timemachinee)

@@ -92,6 +92,11 @@ public class Hitpoints : MonoBehaviour
 
     private void Update()
     {
+        foreach (var item in hearts)
+        {
+            item.gameObject.SetActive(false);
+        }
+
         heartsArraySpot = 0;
         for (float i = 0; i < playerHP; i += 0.5f)
         {
@@ -99,11 +104,7 @@ public class Hitpoints : MonoBehaviour
             heartsArraySpot++;
         }
 
-        foreach (var item in hearts)
-        {
-            item.gameObject.SetActive(false);
-        }
-
+       
         damageTimer -= Time.deltaTime;
         corrosiveTimer -= Time.deltaTime;
         timeBetweenHeals -= Time.deltaTime;

@@ -4306,6 +4306,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6024401441799124133, guid: 9b8ed8d2ee18ad748878ccb689f95860, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1522288017}
+    - target: {fileID: 6024401441799124133, guid: 9b8ed8d2ee18ad748878ccb689f95860, type: 3}
       propertyPath: fullHearts
       value: 
       objectReference: {fileID: 1153429042}
@@ -4445,6 +4449,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   bullet: {fileID: 1453027730326705162, guid: 7b3d8412b045ccc4c88a7a442e659980, type: 3}
+--- !u!95 &1522288017 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6024401441799124061, guid: 9b8ed8d2ee18ad748878ccb689f95860, type: 3}
+  m_PrefabInstance: {fileID: 1522288011}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1523742588
 GameObject:
   m_ObjectHideFlags: 0
