@@ -118,7 +118,12 @@ public class Player : MonoBehaviour
         {
             int _index = 10 - i;
 
-            if(i < UpdatenumberOfTaggedObjects)
+            if (i < 0)
+            {
+                i = 0;
+            }
+
+            if (i < UpdatenumberOfTaggedObjects)
             {
                 trashList[i].enabled = true;
             }
