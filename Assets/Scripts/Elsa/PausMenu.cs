@@ -42,7 +42,7 @@ public class PausMenu : MonoBehaviour
 
     public void Quittomain()
     {
-        SceneManager.LoadScene(8);
+        SceneManager.LoadScene("Menu");
     }
 
     //två voids som startar/pausar spelet och tar fram en canvas
