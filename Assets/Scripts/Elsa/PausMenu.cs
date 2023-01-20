@@ -42,6 +42,7 @@ public class PausMenu : MonoBehaviour
 
     public void Quittomain()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
     }
 
