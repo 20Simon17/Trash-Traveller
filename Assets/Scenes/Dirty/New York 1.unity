@@ -478,7 +478,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 142693961}
   m_CullTransparentMesh: 1
-<<<<<<< Updated upstream
 --- !u!1 &160355678
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,10 +583,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 988808785}
-  m_RootOrder: 36
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
->>>>>>> Stashed changes
 --- !u!1 &200628085
 GameObject:
   m_ObjectHideFlags: 0
@@ -2560,6 +2557,8 @@ Transform:
   - {fileID: 1478817839}
   - {fileID: 1603855018}
   - {fileID: 1652897429}
+  - {fileID: 1311254994}
+  - {fileID: 189489489}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3458,11 +3457,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1287000989}
   m_CullTransparentMesh: 1
-<<<<<<< Updated upstream
 --- !u!1 &1311254993
-=======
---- !u!1 &1260559083
->>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3470,48 +3465,28 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< Updated upstream
   - component: {fileID: 1311254994}
   m_Layer: 0
   m_Name: Spawnpoint (37)
-=======
-  - component: {fileID: 1260559084}
-  m_Layer: 0
-  m_Name: Spawnpoint (7)
->>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< Updated upstream
 --- !u!4 &1311254994
-=======
---- !u!4 &1260559084
->>>>>>> Stashed changes
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 1311254993}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 50.88, y: -0.33, z: 17}
-=======
-  m_GameObject: {fileID: 1260559083}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -40.69, y: -0.5, z: 17}
->>>>>>> Stashed changes
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 988808785}
-<<<<<<< Updated upstream
   m_RootOrder: 37
-=======
-  m_RootOrder: 7
->>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1320065067
 GameObject:

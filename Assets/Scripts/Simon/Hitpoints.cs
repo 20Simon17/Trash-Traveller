@@ -92,6 +92,18 @@ public class Hitpoints : MonoBehaviour
 
     private void Update()
     {
+        heartsArraySpot = 0;
+        for (float i = 0; i < playerHP; i += 0.5f)
+        {
+            hearts[heartsArraySpot].gameObject.SetActive(true);
+            heartsArraySpot++;
+        }
+
+        foreach (var item in hearts)
+        {
+            item.gameObject.SetActive(false);
+        }
+
         damageTimer -= Time.deltaTime;
         corrosiveTimer -= Time.deltaTime;
         timeBetweenHeals -= Time.deltaTime;
@@ -140,18 +152,6 @@ public class Hitpoints : MonoBehaviour
         else if(healCooldown <= 0 && !hasDied)
         {
             shouldHeal = true;
-        }
-        
-        foreach (var item in hearts)
-        {
-            item.gameObject.SetActive(false);
-        }
-
-        heartsArraySpot = 0;
-        for (float i = 0; i < playerHP; i += 0.5f)
-        {
-            hearts[heartsArraySpot].gameObject.SetActive(true);
-            heartsArraySpot++;
         }
 
         if(playerHP <= 0 && !hasDied)
