@@ -7,12 +7,12 @@ public class BUTTONS : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene (2);
+        SceneManager.LoadScene ("The Future");
     }
 
     public void Settings()
     {
-        SceneManager.LoadScene(9);
+        SceneManager.LoadScene("Settings");
     }
 
     public void Quit()

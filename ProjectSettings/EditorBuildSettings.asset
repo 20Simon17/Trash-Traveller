@@ -6,11 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 3fe90bd87f97e4e47a71000d583f4a58
+  - enabled: 1
     path: Assets/Scenes/Dirty/Medieval.unity
     guid: 04740f9ef5676354c8b8c136590367da
   - enabled: 1
     path: Assets/Scenes/Dirty/New York.unity
-    guid: 622d28b4b25611f47ba29e14d8b10e80
+    guid: efb551dc91ab2984ebd9fecff444ef6a
   - enabled: 1
     path: Assets/Scenes/Dirty/The Future.unity
     guid: f447defbb4c9e914884e44a5f19aca66
@@ -29,9 +32,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Half Clean/Medieval half clean.unity
     guid: 773b5a61aa88369498ee2d3b623e94bd
-  - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: 3fe90bd87f97e4e47a71000d583f4a58
   - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: 12e3754636efc9e47a52b3298111a909
