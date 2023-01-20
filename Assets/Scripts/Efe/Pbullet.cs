@@ -17,7 +17,7 @@ public class Pbullet : MonoBehaviour
             Destroy(gameObject); //ta bort skottet -Simon
         }
 
-        transform.position += transform.up * Time.deltaTime * 16;
+        transform.position += transform.up * Time.deltaTime * 16; // - Efe
     }
 
     private void OnTriggerEnter2D(Collider2D collision) //Simon
