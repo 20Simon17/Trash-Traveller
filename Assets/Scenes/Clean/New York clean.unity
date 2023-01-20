@@ -273,7 +273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6024401441799124060, guid: 9b8ed8d2ee18ad748878ccb689f95860, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.16
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6024401441799124060, guid: 9b8ed8d2ee18ad748878ccb689f95860, type: 3}
       propertyPath: m_LocalPosition.y
@@ -809,7 +809,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 738558564}
         m_TargetAssemblyTypeName: Timetraveller, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: NewYorkClean
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
