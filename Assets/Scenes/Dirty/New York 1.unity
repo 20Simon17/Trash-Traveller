@@ -4602,6 +4602,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6024401441799124133, guid: 9b8ed8d2ee18ad748878ccb689f95860, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1629951080}
+    - target: {fileID: 6024401441799124133, guid: 9b8ed8d2ee18ad748878ccb689f95860, type: 3}
       propertyPath: fullHearts
       value: 
       objectReference: {fileID: 541891086}
@@ -4701,17 +4705,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9848433d5154fd24ab3230ebc7f637fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  usingPistol: 0
+  usingPistol: 1
   usingCrossbow: 0
   firepoint: {fileID: 391794379}
   rotatePoint: {fileID: 1386965957}
   damage: 1
   canFire: 1
-  TimebetweeenFiring: 0
+  TimebetweeenFiring: 1
   mask:
     serializedVersion: 2
     m_Bits: 1
   bullet: {fileID: 1453027730326705162, guid: 7b3d8412b045ccc4c88a7a442e659980, type: 3}
+--- !u!95 &1629951080 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6024401441799124061, guid: 9b8ed8d2ee18ad748878ccb689f95860, type: 3}
+  m_PrefabInstance: {fileID: 1629951075}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1641136937
 GameObject:
   m_ObjectHideFlags: 0
