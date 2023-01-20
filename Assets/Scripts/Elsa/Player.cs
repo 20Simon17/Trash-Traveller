@@ -114,7 +114,7 @@ public class Player : MonoBehaviour
                 anim.SetBool("Walking", false); //så ska gå animationen inte kunna spelas -Simon
             
         }
-        for (int i = 0; i < 11; i++)
+        for (int i = 0; i < trashList.Count; i++)
         {
             int _index = 10 - i;
 
