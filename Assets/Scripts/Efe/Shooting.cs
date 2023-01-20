@@ -7,21 +7,21 @@ public class Shooting : MonoBehaviour
     public bool usingPistol; //för att kolla vilken animation som ska spelas när man skjuter :) -Simon
     public bool usingCrossbow; //för att kolla vilken animation som ska spelas när man skjuter :) -Simon
 
-    public Transform firepoint;
+    public Transform firepoint; // -Efe
 
-    public Transform rotatePoint;
+    public Transform rotatePoint; // -Efe
 
-    public int damage = 40;
+    public int damage = 40; // -Efe
 
-    public bool canFire;
+    public bool canFire; // -Efe
 
-    private float timer;
+    private float timer; // -Efe
 
-    public float TimebetweeenFiring;
+    public float TimebetweeenFiring; // -Efe
 
-    public LayerMask mask;
+    public LayerMask mask; // -Efe
 
-    public GameObject bullet;
+    public GameObject bullet; // -Efe
 
     Player player; //Simon
 
@@ -30,20 +30,20 @@ public class Shooting : MonoBehaviour
         player = FindObjectOfType<Player>(); //hämtar spelar koden i scenen (finns bara 1)
     }
 
-    private void Update()
+    private void Update() // -Efe
     {
-        if (Input.GetMouseButtonDown(0) && canFire)
+        if (Input.GetMouseButtonDown(0) && canFire) 
         {
             StartCoroutine(Shoot());
 
             canFire = false;
         }
 
-        if (!canFire)
+        if (!canFire) // -Efe
         {
             timer += Time.deltaTime;
 
-            if (timer > TimebetweeenFiring)
+            if (timer > TimebetweeenFiring) // -Efe
             {
                 canFire = true;
 
@@ -53,26 +53,27 @@ public class Shooting : MonoBehaviour
     }
 
 
-    IEnumerator Shoot()
+    IEnumerator Shoot() // -Efe
     {
-        Vector2 dir = -(rotatePoint.position - firepoint.position).normalized;
+        Vector2 dir = -(rotatePoint.position - firepoint.position).normalized; // -Efe
 
-        RaycastHit2D hitinfo = Physics2D.Raycast(firepoint.position, dir, 60f, mask);
+        RaycastHit2D hitinfo = Physics2D.Raycast(firepoint.position, dir, 60f, mask); // -Efe
 
-        GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation);
+        GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation); // -Efe
 
-        newBullet.transform.up = dir;
+        newBullet.transform.up = dir; // -Efe
 
-        yield return new WaitForSeconds(0.02f);
+        yield return new WaitForSeconds(0.02f); // -Efe
 
         if (usingPistol)
         {
-            player.anim.SetTrigger("PistolShoot");
+            player.anim.SetTrigger("PistolShoot"); // Simon
         }
 
         else if (usingCrossbow)
         {
-            player.anim.SetTrigger("CrossbowShoot");
+            player.anim.SetTrigger("CrossbowShoot"); // Simon
         }
     }
+   
 }
