@@ -188,7 +188,6 @@ public class Player : MonoBehaviour
 
             if (collision.gameObject.tag == "Timemachine" && Input.GetKey(Timemachinee) && UpdatenumberOfTaggedObjects == 0)
             {
-                Debug.Log("hargjort");
                 buttons.SetActive(true);
             }
 
