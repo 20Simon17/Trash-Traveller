@@ -18,12 +18,12 @@ public class Walls : MonoBehaviour
     {
         if (leftWall)
         {
-            transform.position = new Vector2(player.transform.position.x - 8, 0);
+            transform.position = new Vector2(player.transform.position.x - 9, 0);
         }
 
         if (rightWall)
         {
-            transform.position = new Vector2(player.transform.position.x + 8, 0);
+            transform.position = new Vector2(player.transform.position.x + 9, 0);
         }
     }
 
