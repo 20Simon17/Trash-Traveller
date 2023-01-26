@@ -4640,7 +4640,7 @@ MonoBehaviour:
   rotatePoint: {fileID: 1386965957}
   damage: 1
   canFire: 1
-  TimebetweeenFiring: 1
+  TimebetweeenFiring: 0.5
   mask:
     serializedVersion: 2
     m_Bits: 1
@@ -4915,7 +4915,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.4
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
