@@ -25,23 +25,28 @@ public class Hitpoints : MonoBehaviour
     public float corrosiveTimer;
     public float timeBetweenHeals;
     public float healCooldown;
+    public float blinkTimer = 0.3f;
 
     float damageTimerOriginal;
     float corrosiveTimerOriginal;
     float timeBetweenHealsOriginal;
     float healCooldownOriginal;
+    float blinkTimerOriginal;
 
     public Animator anim;
+    public SpriteRenderer rend;
 
     private void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
+        rend = GetComponent<SpriteRenderer>();
 
         damageTimerOriginal = damageTimer;
         corrosiveTimerOriginal = corrosiveTimer;
         timeBetweenHealsOriginal = timeBetweenHeals;
         healCooldownOriginal = healCooldown;
+        blinkTimerOriginal = blinkTimer;
 
         for (int x = 0; x < 20; x++)
         {
@@ -73,6 +78,7 @@ public class Hitpoints : MonoBehaviour
             playerHP -= 1f;
             healCooldown = healCooldownOriginal;
             Destroy(collision.gameObject);
+            characterDamageBlink();
         }
     }
 
@@ -104,11 +110,16 @@ public class Hitpoints : MonoBehaviour
             heartsArraySpot++;
         }
 
+        if(blinkTimer <= 0)
+        {
+            rend.color = Color.white;
+        }
        
         damageTimer -= Time.deltaTime;
         corrosiveTimer -= Time.deltaTime;
         timeBetweenHeals -= Time.deltaTime;
         healCooldown -= Time.deltaTime;
+        blinkTimer -= Time.deltaTime;
 
         if (corrosiveTimer >= 0)
         {
@@ -117,6 +128,8 @@ public class Hitpoints : MonoBehaviour
                 damageTimer = damageTimerOriginal;
                 playerHP -= 0.5f;
                 healCooldown = healCooldownOriginal;
+                characterDamageBlink();
+
             }
         }
 
@@ -127,6 +140,7 @@ public class Hitpoints : MonoBehaviour
                 damageTimer = damageTimerOriginal;
                 playerHP -= 0.5f;
                 healCooldown = healCooldownOriginal;
+                characterDamageBlink();
             }
         }
 
@@ -158,7 +172,7 @@ public class Hitpoints : MonoBehaviour
         if(playerHP <= 0 && !hasDied)
         {
             hasDied = true;
-            anim.SetTrigger("Die");
+            anim.SetBool("Death", true);
             shouldHeal = false;
         }
     }
@@ -166,5 +180,11 @@ public class Hitpoints : MonoBehaviour
     void BackToMenu()
     {
         SceneManager.LoadScene("Menu");
+    }
+
+    void characterDamageBlink()
+    {
+        rend.color = new Color32(255, 150, 150, 255);
+        blinkTimer = blinkTimerOriginal;
     }
 }
