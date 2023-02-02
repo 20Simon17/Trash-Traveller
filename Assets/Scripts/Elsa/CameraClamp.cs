@@ -13,6 +13,6 @@ public class CameraClamp : MonoBehaviour
 
     private void Update()
     {
-        transform.position = new Vector2(player.transform.position.x, -0.5f);
+        transform.position = new Vector3(player.transform.position.x, -0.5f, -10);
     }
 }
