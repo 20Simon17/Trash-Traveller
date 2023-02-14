@@ -25,12 +25,14 @@ public class Introduktion : MonoBehaviour
 
     public void Intro()
     {
-        rend.sprite = bubbles[introduktion];
+        
         introduktion += 1;
 
         if (introduktion >= bubbles.Length)
         {
             introduktion = 0;
         }
+
+        rend.sprite = bubbles[introduktion];
     }
 }

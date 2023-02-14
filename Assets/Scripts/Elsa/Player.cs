@@ -182,15 +182,6 @@ public class Player : MonoBehaviour
                 anim.SetBool("Land", false);
             }
         }
-
-        public void OnTriggerStay2D(Collider2D collision)
-        {
-
-            if (collision.gameObject.tag == "Timemachine" && Input.GetKey(Timemachinee) && UpdatenumberOfTaggedObjects == 0)
-            {
-                buttons.SetActive(true);
-            }
-
-            //det här gör så att timemachine canvasen kommer upp när man klickar E men bara om man har städat klart alltså att det inte finns några taggade objects kvar i scenen.
-        }
+        //det här gör så att timemachine canvasen kommer upp när man klickar E men bara om man har städat klart alltså att det inte finns några taggade objects kvar i scenen.
+    
 }
