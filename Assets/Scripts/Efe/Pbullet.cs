@@ -17,7 +17,7 @@ public class Pbullet : MonoBehaviour
             Destroy(gameObject); //ta bort skottet -Simon
         }
 
-        transform.position += transform.up * Time.deltaTime * 16; // - Efe
+        transform.position += transform.up * Time.deltaTime * 16; // För att få skottet röra på sig mot riktningen av "up" - Efe
     }
 
     private void OnTriggerEnter2D(Collider2D collision) //Simon
