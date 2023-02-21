@@ -39,6 +39,18 @@ public class Shooting : MonoBehaviour
             canFire = false;
         }
 
+      else  if (Input.GetMouseButton(0) && canFire)
+        {
+            StartCoroutine(Shoot());
+
+            canFire = false;
+
+            if(TimebetweeenFiring <=0)
+            {
+                StartCoroutine(Shoot());
+            }
+        }
+
         if (!canFire) // -Efe
         {
             timer += Time.deltaTime;

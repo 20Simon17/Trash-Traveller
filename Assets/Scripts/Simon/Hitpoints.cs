@@ -44,6 +44,7 @@ public class Hitpoints : MonoBehaviour
 
         damageTimerOriginal = damageTimer;
         corrosiveTimerOriginal = corrosiveTimer;
+        corrosiveTimer = 0;
         timeBetweenHealsOriginal = timeBetweenHeals;
         healCooldownOriginal = healCooldown;
         blinkTimerOriginal = blinkTimer;
@@ -129,7 +130,6 @@ public class Hitpoints : MonoBehaviour
                 playerHP -= 0.5f;
                 healCooldown = healCooldownOriginal;
                 characterDamageBlink();
-
             }
         }
 
