@@ -1,13 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Introduktion : MonoBehaviour
 {
 
-    int introduktion = 0;
-    public Sprite[] bubbles;
+    int imageNumber = 0;
+
+    //public Sprite[] bubbles;
     SpriteRenderer rend;
+    Image image;
+
+    public Sprite[] bubbles;
+
+    public GameObject imageObject;
 
     public GameObject button;
 
@@ -15,24 +22,21 @@ public class Introduktion : MonoBehaviour
     private void Start()
     {
         rend = GetComponent<SpriteRenderer>();
+        image = imageObject.GetComponent<Image>(); 
     }
-
-    private void Update()
-    {
-        Intro();
-    }
-
 
     public void Intro()
     {
-        
-        introduktion += 1;
+        imageObject.SetActive(true);
+        image.sprite = bubbles[imageNumber];
+        imageNumber += 1;
 
-        if (introduktion >= bubbles.Length)
+        if (imageNumber >= bubbles.Length)
         {
-            introduktion = 0;
+            imageNumber = bubbles.Length-1;
+            imageObject.SetActive(false);
         }
 
-        rend.sprite = bubbles[introduktion];
+        rend.sprite = bubbles[imageNumber];
     }
 }
