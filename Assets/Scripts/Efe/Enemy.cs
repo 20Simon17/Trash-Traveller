@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour // den här enemy scripten används inte.
 {
     public GameObject player; // -Efe
 
@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
    
     private float distance; // -Efe
 
-    public void TakeDamage(int damage) // -Efe
+    public void TakeDamage(int damage) // om health blir 0 dör man -Efe
     {
         health -= damage;
 
@@ -26,12 +26,12 @@ public class Enemy : MonoBehaviour
 
     
 
-    void Die() // -Efe
+    void Die() // die = döda gubben -Efe
     {
         Destroy(gameObject);
     }
 
-    private void Update() // -Efe
+    private void Update() //  -Efe
     {
 
         distance = Vector2.Distance(transform.position, player.transform.position);
