@@ -27,14 +27,9 @@ public class Introduktion : MonoBehaviour
 
     public void Intro()
     {
-<<<<<<< Updated upstream
-        
-        introduktion += 1;
-=======
         imageObject.SetActive(true);
         image.sprite = bubbles[imageNumber];
         imageNumber += 1;
->>>>>>> Stashed changes
 
         if (imageNumber >= bubbles.Length)
         {
@@ -42,6 +37,6 @@ public class Introduktion : MonoBehaviour
             imageObject.SetActive(false);
         }
 
-        rend.sprite = bubbles[introduktion];
+        rend.sprite = bubbles[imageNumber];
     }
 }
