@@ -25,6 +25,8 @@ public class Walls : MonoBehaviour
         {
             transform.position = new Vector2(player.transform.position.x + 9, 0);
         }
+
+        //placerar väggarna på rätt avstånd från spelaren vid start. 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
