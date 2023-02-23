@@ -4460,7 +4460,7 @@ MonoBehaviour:
   rotatePoint: {fileID: 402223450}
   damage: 1
   canFire: 1
-  TimebetweeenFiring: 1
+  TimebetweeenFiring: 1.6
   mask:
     serializedVersion: 2
     m_Bits: 1
