@@ -30,7 +30,7 @@ public class Shooting : MonoBehaviour
         player = FindObjectOfType<Player>(); //hämtar spelar koden i scenen (finns bara 1)
     }
 
-    private void Update() // -Efe
+    private void Update() // om man trycker mouse 0, aktiveras "startcoroutine(shoot)" -Efe
     {
         if (Input.GetMouseButtonDown(0) && canFire) 
         {
@@ -39,7 +39,7 @@ public class Shooting : MonoBehaviour
             canFire = false;
         }
 
-      else  if (Input.GetMouseButton(0) && canFire)
+      else  if (Input.GetMouseButton(0) && canFire) // om man aldrig släpper aktiveras "hold to shoot"
         {
             StartCoroutine(Shoot());
 
@@ -51,7 +51,7 @@ public class Shooting : MonoBehaviour
             }
         }
 
-        if (!canFire) // -Efe
+        if (!canFire) // -Efe // ger tid mellan varje gång man skjuter 
         {
             timer += Time.deltaTime;
 
@@ -65,15 +65,14 @@ public class Shooting : MonoBehaviour
     }
 
 
-    IEnumerator Shoot() // -Efe
+    IEnumerator Shoot() 
     {
-        Vector2 dir = -(rotatePoint.position - firepoint.position).normalized; // -Efe
+        Vector2 dir = -(rotatePoint.position - firepoint.position).normalized; // får skotten spawn'a i direktionen av "firepoint" -Efe
 
-        RaycastHit2D hitinfo = Physics2D.Raycast(firepoint.position, dir, 60f, mask); // -Efe
+        RaycastHit2D hitinfo = Physics2D.Raycast(firepoint.position, dir, 60f, mask); // lägger en osynlig raycast i positionen av "firepoint" -Efe 
 
-        GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation); // -Efe
-
-        newBullet.transform.up = dir; // -Efe
+        GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation); // ger direction till skotten("newBullet") som-     
+ newBullet.transform.up = dir;  // -är direktionen av dir
 
         yield return new WaitForSeconds(0.02f); // -Efe
 
