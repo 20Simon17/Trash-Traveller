@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
                 transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime;
                 transform.rotation = Quaternion.Euler(0, 0, 0);
                 rend.flipX = false;
-                //movement åt vänster:)
+                //movement åt vänster:) säger också att man inte ska kunna rotera
             }
 
             if (Input.GetKey(right) && Input.GetKey(KeyCode.LeftShift))
@@ -83,10 +83,10 @@ public class Player : MonoBehaviour
                 transform.position += new Vector3(sprintspeed, 0, 0) * Time.deltaTime;
                 transform.rotation = Quaternion.Euler(0, 0, 0);
                 rend.flipX = true;
-                //håll in Lskift för att springa snabbare tillsammans med vanliga right knappen.
-            }
+                //håll in Lskift för att springa snabbare tillsammans med vanliga right knappen. säger också att man inte ska kunna rotera
+        }
 
-            else if (Input.GetKey(right))
+        else if (Input.GetKey(right))
             {
                 anim.SetBool("Running", false); //när man håller ner höger rörelse knapp så ska spring animationen inte kunna spelas -Simon
                 anim.SetBool("Walking", true); //-||- så ska gå animationen kunna spelas -Simon
@@ -94,10 +94,10 @@ public class Player : MonoBehaviour
                 transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
                 transform.rotation = Quaternion.Euler(0, 0, 0);
                 rend.flipX = true;
-                //movement åt höger:)
-            }
+                //movement åt höger:) säger också att man inte ska kunna rotera
+        }
 
-            if (Input.GetKeyDown(jump) && grounded)
+        if (Input.GetKeyDown(jump) && grounded)
             {
                 anim.SetBool("Running", false); //när man är på marken och trycker på hopp knappen så ska inte spring animationen kunna spelas längre  -Simon
                 anim.SetBool("Walking", false); //-||- så ska inte gå animationen kunna spelas längre -Simon
@@ -114,7 +114,7 @@ public class Player : MonoBehaviour
                 anim.SetBool("Walking", false); //så ska gå animationen inte kunna spelas -Simon
             
         }
-        for (int i = 0; i < trashList.Count; i++)
+        for (int i = 0; i < trashList.Count; i++) //for loop som kollar om i är mindre än noll och isåfall är i = 0
         {
             int _index = 10 - i;
 
@@ -123,7 +123,7 @@ public class Player : MonoBehaviour
                 i = 0;
             }
 
-            if (i < UpdatenumberOfTaggedObjects)
+            if (i < UpdatenumberOfTaggedObjects) //den här if satsen stänger av trashlisten om UpdatenumberOfTaggedObjects är mindre än i annars är den på hela tiden.
             {
                 trashList[i].enabled = true;
             }
@@ -133,18 +133,19 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (UpdatenumberOfTaggedObjects == 0)
-            {
+        if (UpdatenumberOfTaggedObjects == 0) //den här stänger av trashbar gameobjectet om UpdatenumberOfTaggedObjects 0
+        { 
                 trashList[trashbar].gameObject.SetActive(false);
                 trashbar--;
 
                 if (trashbar <= 0)
                 {
-                    trashbar = 0;
-                }
 
-                //den här koden kopplar ihop hur många object med tagen trash från början till hur många det finns kvar genom att dela och sen gångra med höger för att den ska ta bort en plats i listan för trashbaren när 10 % försvunnit och sen 20% och så vidare
-            }
+                    trashbar = 0;
+
+                }
+                
+        }
 
             
         }
