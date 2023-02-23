@@ -116,7 +116,7 @@ public class Player : MonoBehaviour
                 anim.SetBool("Walking", false); //så ska gå animationen inte kunna spelas -Simon
             
         }
-        for (int i = 0; i < trashList.Count; i++) //kod för att trashbaren ska ladda in alla 10 delar av ba
+        for (int i = 0; i < trashList.Count; i++) //kod för att trashbaren ska ladda in alla 10 delar av baren
         {
             int _index = 10 - i;
 
@@ -125,7 +125,7 @@ public class Player : MonoBehaviour
                 i = 0;
             }
 
-            if (i < UpdatenumberOfTaggedObjects)
+            if (i < UpdatenumberOfTaggedObjects) //det här stänger av trashlisten om UpdatenumberOfTaggedObjects är mindre än i
             {
                 trashList[i].enabled = true;
             }
@@ -135,12 +135,12 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (UpdatenumberOfTaggedObjects == 0)
-            {
+        if (UpdatenumberOfTaggedObjects == 0) //och den här stänger av trashbar objectet om UpdatenumberOfTaggedObjects = 0
+        {
                 trashList[trashbar].gameObject.SetActive(false);
                 trashbar--;
 
-                if (trashbar <= 0)
+                if (trashbar <= 0) //den här säger till att om trashbar är mindre än 0 är den alltid 0
                 {
                     trashbar = 0;
                 }
