@@ -123,9 +123,9 @@ public class Hitpoints : MonoBehaviour
         healCooldown -= Time.deltaTime;
         blinkTimer -= Time.deltaTime;
 
-        if (corrosiveTimer >= 0)
+        if (corrosiveTimer >= 0) //så länge corrosive timer är över 0
         {
-            if(damageTimer <= 0)
+            if(damageTimer <= 0) //så kollar vi om damage timer går under 0 för att spelaren ska ta skada
             {
                 damageTimer = damageTimerOriginal;
                 playerHP -= 0.5f;
@@ -134,9 +134,9 @@ public class Hitpoints : MonoBehaviour
             }
         }
 
-        if (shouldTakeTickDamage)
+        if (shouldTakeTickDamage) //om spelaren ska ta tick damage (alltså om den står på skräp)
         {
-            if(damageTimer <= 0f)
+            if(damageTimer <= 0f) //så kollar vi om damage timer går under 0 för att spelaren ska ta skada 
             {
                 damageTimer = damageTimerOriginal;
                 playerHP -= 0.5f;
@@ -145,32 +145,32 @@ public class Hitpoints : MonoBehaviour
             }
         }
 
-        if (shouldHeal)
+        if (shouldHeal) //om man ska kunna heala
         {
-            if(timeBetweenHeals <= 0f)
+            if(timeBetweenHeals <= 0f) //så kollar vi om timeBetweenHeals är mindre än eller lika med 0 för att spelaren ska få lite hp
             {
                 timeBetweenHeals = timeBetweenHealsOriginal;
                 playerHP += 0.5f;
             }
         }
 
-        if(playerHP >= 10)
+        if(playerHP >= 10) //om spelarens hp är över eller lika med 10 så sätter vi tillbaka till 10
         {
             shouldHeal = false;
             playerHP = 10f;
         }
 
-        if(healCooldown > 0)
+        if(healCooldown > 0) //om healCooldown är över 0 så ska man inte kunna heala
         {
             shouldHeal = false;
         }
 
-        else if(healCooldown <= 0 && !hasDied)
+        else if(healCooldown <= 0 && !hasDied) //om healCooldown är mindre än eller lika med 0 och man inte har dött så ska man kunna heala
         {
             shouldHeal = true;
         }
 
-        if(playerHP <= 0 && !hasDied)
+        if(playerHP <= 0 && !hasDied) //om spelarens hp är mindre än eller lika med 0 och man inte har dött så dör man
         {
             hasDied = true;
             anim.SetBool("Death", true);
@@ -178,12 +178,12 @@ public class Hitpoints : MonoBehaviour
         }
     }
 
-    void BackToMenu()
+    void BackToMenu() //funktion för att skicka spelaren tillbaka till menyn
     {
         SceneManager.LoadScene("Menu");
     }
 
-    void characterDamageBlink()
+    void characterDamageBlink() //funktion som gör så att karaktären blinkar rött när den tar skada
     {
         rend.color = new Color32(255, 150, 150, 255);
         blinkTimer = blinkTimerOriginal;
