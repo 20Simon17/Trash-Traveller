@@ -11,7 +11,7 @@ public class Cursor : MonoBehaviour
     public Transform BulletTransform; // -Efe
 
 
-    void Start() // -Efe
+    void Start() //  -Efe
     {
         maincam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
