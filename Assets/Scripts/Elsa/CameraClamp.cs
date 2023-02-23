@@ -15,4 +15,6 @@ public class CameraClamp : MonoBehaviour
     {
         transform.position = new Vector3(player.transform.position.x, -0.5f, -10);
     }
+
+    //Den förflyttar sig efter spelaren
 }
