@@ -42,6 +42,7 @@ public class Hitpoints : MonoBehaviour
         anim = GetComponent<Animator>();
         rend = GetComponent<SpriteRenderer>();
 
+        //värdena här under är original värden för alla timers så att vi lätt kan starta om de
         damageTimerOriginal = damageTimer;
         corrosiveTimerOriginal = corrosiveTimer;
         corrosiveTimer = 0;
@@ -49,7 +50,7 @@ public class Hitpoints : MonoBehaviour
         healCooldownOriginal = healCooldown;
         blinkTimerOriginal = blinkTimer;
 
-        for (int x = 0; x < 20; x++)
+        for (int x = 0; x < 20; x++) //refererar till alla 20 objekt som tillsammans bildar hp baren när man startar spelet och ger alla en egen plats i en array
         {
             if(hH == fH)
             {
@@ -67,14 +68,14 @@ public class Hitpoints : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 8)
+        if (collision.gameObject.layer == 8) //om spelaren kolliderar med något på skräp lagret så startar vi timern för att ta skada
         {
             shouldTakeTickDamage = true;
             shouldHeal = false;
             damageTimer = damageTimerOriginal;
         }
 
-        if(collision.gameObject.layer == 9)
+        if(collision.gameObject.layer == 9) //om spelaren kolliderar med något på skott lagret så tar spelaren 1 skada, heal timern startas om och skottet försvinner
         {
             playerHP -= 1f;
             healCooldown = healCooldownOriginal;
@@ -85,7 +86,7 @@ public class Hitpoints : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.gameObject.layer == 8)
+        if(collision.gameObject.layer == 8) //om spelaren slutar kollidera med något på skräp lagret så ändrar vi värdena på massor av variabler 
         {
             shouldTakeTickDamage = false;
             shouldHeal = true;
@@ -99,19 +100,19 @@ public class Hitpoints : MonoBehaviour
 
     private void Update()
     {
-        foreach (var item in hearts)
+        foreach (var item in hearts) 
         {
             item.gameObject.SetActive(false);
         }
 
         heartsArraySpot = 0;
-        for (float i = 0; i < playerHP; i += 0.5f)
+        for (float i = 0; i < playerHP; i += 0.5f) //sätter hjärtan till aktiva så länge hp variabelns värde är stort nog för att nå deras plats i hearts arrayen
         {
             hearts[heartsArraySpot].gameObject.SetActive(true);
             heartsArraySpot++;
         }
 
-        if(blinkTimer <= 0)
+        if(blinkTimer <= 0) //om spelaren inte längre ska blinka så sätter vi tillbaka färgen till ursprungsfärgen
         {
             rend.color = Color.white;
         }

@@ -37,6 +37,8 @@ public class Player : MonoBehaviour
 
     public GameObject buttons;
 
+    public bool shouldMove = true;
+
     void Start()
     {
         rb = transform.GetComponent<Rigidbody2D>();
@@ -114,7 +116,7 @@ public class Player : MonoBehaviour
                 anim.SetBool("Walking", false); //så ska gå animationen inte kunna spelas -Simon
             
         }
-        for (int i = 0; i < trashList.Count; i++)
+        for (int i = 0; i < trashList.Count; i++) //kod för att trashbaren ska ladda in alla 10 delar av ba
         {
             int _index = 10 - i;
 

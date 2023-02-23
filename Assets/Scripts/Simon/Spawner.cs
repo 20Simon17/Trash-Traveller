@@ -21,7 +21,7 @@ public class Spawner : MonoBehaviour
         spawnpointsList = new List<GameObject>(spawnpointsArray); 
         //kopierar min spawnpoint array till en lista som jag kan ändra hur jag vill
 
-        for (int i = 0; i < AmountToSpawn; i++)
+        for (int i = 0; i < AmountToSpawn; i++) //for loop för att spawna fiender på spawnpoints i scenen
         {
             randomSpawnpoint = Random.Range(0, spawnpointsList.Count);
             Instantiate(objectToSpawn, spawnpointsList[randomSpawnpoint].transform.position, Quaternion.identity);

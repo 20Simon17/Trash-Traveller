@@ -10,6 +10,11 @@ public class Buildings : MonoBehaviour
 
     Vector3 position = new Vector3(1, 0, 0);
 
+    private void Start()
+    {
+        
+    }
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 14)
