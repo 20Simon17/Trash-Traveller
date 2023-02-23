@@ -34,11 +34,11 @@ public class Enemies : MonoBehaviour
     {
         playerPos = player.transform.position;
 
-        if (modernEnemy)
+        if (modernEnemy) //kollar om vi klickat i "modernEnemy" bool, eftersom det behöver specifik kod
         {
             pistolShootDelay -= Time.deltaTime;
 
-            if(pistolShootDelay <= 0)
+            if(pistolShootDelay <= 0) //om pistolShootDelay är mindre än eller lika med 0 så ska skräpet skjuta
             {
                 pistolShootDelay = pistolShootDelayOriginal;
 
@@ -51,19 +51,19 @@ public class Enemies : MonoBehaviour
             anim.SetBool("IsMedievalTrash", true);
         }
 
-        if(hp <= 0)
+        if(hp <= 0) //om skräpet har mindre än eller lika med 0 hp så tar vi bort det
         {
             Destroy(gameObject);
         }
 
-        diffrence = player.transform.position.x - transform.position.x;
+        diffrence = player.transform.position.x - transform.position.x; //kollar vilket håll skräpet ska vara roterat -Elsa
 
-        if (diffrence >= 0)
+        if (diffrence >= 0) //Elsa
         {
             rend.flipX = true;
         }
 
-        else if (diffrence <= 0)
+        else if (diffrence <= 0) //Elsa
         {
             rend.flipX = false;
         }

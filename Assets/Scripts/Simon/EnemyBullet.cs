@@ -18,18 +18,18 @@ public class EnemyBullet : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = FindObjectOfType<Player>();
 
-        moveDirection = (player.transform.position - transform.position).normalized * moveSpeed;
+        moveDirection = (player.transform.position - transform.position).normalized * moveSpeed; //kollar riktningen skottet måste åka för att träffa spelaren, sker bara 1 gång vilket är när skottet spawnas
         rb.velocity = moveDirection;
 
-        transform.LookAt(player.transform);
-        transform.Rotate(new Vector3(0, 90, 0));
+        transform.LookAt(player.transform); //roterar skottet mot spelaren
+        transform.Rotate(new Vector3(0, 90, 0)); //roterar skottet med 90 grader på y axeln eftersom det av någon anledning låg platt annars.. (osynligt)
     }
 
     private void Update()
     {
         projectileAliveTime += Time.deltaTime;
 
-        if(projectileAliveTime >= 2)
+        if(projectileAliveTime >= 2) //om skottet existerat i mer än eller lika med 2 sekunder så tar vi bort det
         {
             Destroy(gameObject);
         }
@@ -37,7 +37,7 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.layer == 7)
+        if(collision.gameObject.layer == 7) //om skottet kolliderar med spelaren så tar vi bort skottet
         {
             Destroy(gameObject);
         }

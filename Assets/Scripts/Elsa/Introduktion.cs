@@ -8,12 +8,15 @@ public class Introduktion : MonoBehaviour
 
     int imageNumber = 0;
 
-    //public Sprite[] bubbles;
-    SpriteRenderer rend;
     Image image;
 
-    public Sprite[] bubbles;
+    public GameObject smallIntroduction;
+    public GameObject gubbe;
+    public GameObject introduction;
 
+    public Sprite[] bubbles;
+    public Sprite[] bubbles2;
+ 
     public GameObject imageObject;
 
     public GameObject button;
@@ -21,22 +24,33 @@ public class Introduktion : MonoBehaviour
 
     private void Start()
     {
-        rend = GetComponent<SpriteRenderer>();
-        image = imageObject.GetComponent<Image>(); 
+        image = imageObject.GetComponent<Image>();
+
+        bubbles2 = bubbles;
     }
 
     public void Intro()
     {
+        Color bla = image.color;
+        bla.a = 1;
+        image.color = bla;
+        
         imageObject.SetActive(true);
         image.sprite = bubbles[imageNumber];
         imageNumber += 1;
+
 
         if (imageNumber >= bubbles.Length)
         {
             imageNumber = bubbles.Length-1;
             imageObject.SetActive(false);
-        }
 
-        rend.sprite = bubbles[imageNumber];
+            gubbe.SetActive(false);
+
+            bubbles = bubbles2;
+            imageNumber = 0;
+            smallIntroduction.SetActive(true);
+            introduction.SetActive(false);
+        }
     }
 }
